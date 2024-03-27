@@ -1,0 +1,1202 @@
+[
+  {
+    "_id": "1",
+    "name": "Bulbasaur",
+    "types": ["GRASS", "POISON"],
+    "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 1}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "_id": "2",
+    "name": "Ivysaur",
+    "types": ["GRASS", "POISON"],
+    "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 2}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+  },
+  {
+    "_id": "3",
+    "name": "Venusaur",
+    "types": ["GRASS", "POISON"],
+    "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 3}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+  },
+  {
+    "_id": "4",
+    "name": "Charmander",
+    "types": ["FIRE"],
+    "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 4}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "_id": "5",
+    "name": "Charmeleon",
+    "types": ["FIRE"],
+    "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 5}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+  },
+  {
+    "_id": "6",
+    "name": "Charizard",
+    "types": ["FIRE", "FLYING"],
+    "description": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 6}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+  },
+  {
+    "_id": "7",
+    "name": "Squirtle",
+    "types": ["WATER"],
+    "description": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 7}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "_id": "8",
+    "name": "Wartortle",
+    "types": ["WATER"],
+    "description": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 8}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+  },
+  {
+    "_id": "9",
+    "name": "Blastoise",
+    "types": ["WATER"],
+    "description": "A brutal Pokémon with pressurized water jets on its shell. They are used for high-speed tackles.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 9}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+  },
+  {
+    "_id": "10",
+    "name": "Caterpie",
+    "types": ["BUG"],
+    "description": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 10}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "_id": "11",
+    "name": "Metapod",
+    "types": ["BUG"],
+    "description": "This Pokémon is vulnerable to attack while its shell is soft, exposing its weak and tender body.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 11}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+  },
+  {
+    "_id": "12",
+    "name": "Butterfree",
+    "types": ["BUG", "FLYING"],
+    "description": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 12}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+  },
+  {
+    "_id": "13",
+    "name": "Weedle",
+    "types": ["BUG", "POISON"],
+    "description": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 13}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png"
+  },
+  {
+    "_id": "14",
+    "name": "Kakuna",
+    "types": ["BUG", "POISON"],
+    "description": "This Pokémon is in a temporary stage while making its body. It is almost completely unable to move on its own.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 14}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
+  },
+  {
+    "_id": "15",
+    "name": "Beedrill",
+    "types": ["BUG", "POISON"],
+    "description": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 15}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+  },
+  {
+    "_id": "16",
+    "name": "Pidgey",
+    "types": ["NORMAL", "FLYING"],
+    "description": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 16}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "_id": "17",
+    "name": "Pidgeotto",
+    "types": ["NORMAL", "FLYING"],
+    "description": "The claws on its feet are well developed. It can carry prey such as an Exeggcute to its nest over 60 miles away.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 17}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+  },
+  {
+    "_id": "18",
+    "name": "Pidgeot",
+    "types": ["NORMAL", "FLYING"],
+    "description": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 18}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png"
+  },
+  {
+    "_id": "19",
+    "name": "Rattata",
+    "types": ["NORMAL"],
+    "description": "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 19}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "_id": "20",
+    "name": "Raticate",
+    "types": ["NORMAL"],
+    "description": "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 20}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+  },
+  {
+    "_id": "21",
+    "name": "Spearow",
+    "types": ["NORMAL", "FLYING"],
+    "description": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 21}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "_id": "22",
+    "name": "Fearow",
+    "types": ["NORMAL", "FLYING"],
+    "description": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 22}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png"
+  },
+  {
+    "_id": "23",
+    "name": "Ekans",
+    "types": ["POISON"],
+    "description": "Moves silently and stealthily. Eats the eggs of birds, such as Pidgey and Spearow, whole.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 23}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png"
+  },
+  {
+    "_id": "24",
+    "name": "Arbok",
+    "types": ["POISON"],
+    "description": "The pattern on its belly appears to be a frightening face. Weak foes will flee just at the sight of the pattern.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 24}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "_id": "25",
+    "name": "Pikachu",
+    "types": ["ELECTRIC"],
+    "description": "When several of these Pokémon gather, their electricity could build and cause lightning storms.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 25}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "_id": "26",
+    "name": "Raichu",
+    "types": ["ELECTRIC"],
+    "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 26}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+  },
+  {
+    "_id": "27",
+    "name": "Sandshrew",
+    "types": ["GROUND"],
+    "description": "Burrows deep underground in arid locations far from water. It only emerges to hunt for food.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 27}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "_id": "28",
+    "name": "Sandslash",
+    "types": ["GROUND"],
+    "description": "Curls up into a spiny ball when threatened. It can roll while curled up to attack or escape.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 28}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
+  },
+  {
+    "_id": "29",
+    "name": "Nidoran♀",
+    "types": ["POISON"],
+    "description": "Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 29}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png"
+  },
+  {
+    "_id": "30",
+    "name": "Nidorina",
+    "types": ["POISON"],
+    "description": "The female's horn develops slowly. Prefers physical attacks such as clawing and biting.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 30}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png"
+  },
+  {
+    "_id": "31",
+    "name": "Nidoqueen",
+    "types": ["POISON", "GROUND"],
+    "description": "Its hard scales provide strong protection. It uses its hefty bulk to execute powerful moves.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 31}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
+  },
+  {
+    "_id": "32",
+    "name": "Nidoran♂",
+    "types": ["POISON"],
+    "description": "Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 32}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/032.png"
+  },
+  {
+    "_id": "33",
+    "name": "Nidorino",
+    "types": ["POISON"],
+    "description": "An aggressive Pokémon that is quick to attack. The horn on its head secretes a powerful venom.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 33}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/033.png"
+  },
+  {
+    "_id": "34",
+    "name": "Nidoking",
+    "types": ["POISON", "GROUND"],
+    "description": "It is recognized by its rock-hard hide and its extended horn. Be careful with the horn as it contains venom.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 34}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png"
+  },
+  {
+    "_id": "35",
+    "name": "Clefairy",
+    "types": ["FAIRY"],
+    "description": "Adored for their cute looks and playfulness. They are thought to bring good fortune to whoever finds one.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 35}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "_id": "36",
+    "name": "Clefable",
+    "types": ["FAIRY"],
+    "description": "It is said that happiness will come to those who see a gathering of Clefable dancing under a full moon.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 36}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png"
+  },
+  {
+    "_id": "37",
+    "name": "Vulpix",
+    "types": ["FIRE"],
+    "description": "Both its fur and its tails are beautiful. As it grows, the tails split and form more tails.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 37}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "_id": "38",
+    "name": "Ninetales",
+    "types": ["FIRE"],
+    "description": "Very smart and very vengeful. Grabbing one of its many tails could result in a 1000-year curse.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 38}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png"
+  },
+  {
+    "_id": "39",
+    "name": "Jigglypuff",
+    "types": ["NORMAL", "FAIRY"],
+    "description": "When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 39}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+  },
+  {
+    "_id": "40",
+    "name": "Wigglytuff",
+    "types": ["NORMAL", "FAIRY"],
+    "description": "The body is soft and rubbery. When angered, it will suck in air and inflate itself to an enormous size.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 40}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png"
+  },
+  {
+    "_id": "41",
+    "name": "Zubat",
+    "types": ["POISON", "FLYING"],
+    "description": "Emits ultrasonic cries while it flies. They act as a sonar used to check for objects in its way.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 41}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "_id": "42",
+    "name": "Golbat",
+    "types": ["POISON", "FLYING"],
+    "description": "It loves the blood of humans and Pokémon. It flies around at night in search of neck veins.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 42}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "_id": "43",
+    "name": "Oddish",
+    "types": ["GRASS", "POISON"],
+    "description": "During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 43}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png"
+  },
+  {
+    "_id": "44",
+    "name": "Gloom",
+    "types": ["GRASS", "POISON"],
+    "description": "Its pistils exude an incredibly foul odor. The horrid stench can cause fainting at a distance of 1.25 miles.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 44}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png"
+  },
+  {
+    "_id": "45",
+    "name": "Vileplume",
+    "types": ["GRASS", "POISON"],
+    "description": "The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 45}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png"
+  },
+  {
+    "_id": "46",
+    "name": "Paras",
+    "types": ["BUG", "GRASS"],
+    "description": "Burrows to suck tree roots. The mushrooms on its back grow by drawing nutrients from the bug host.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 46}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png"
+  },
+  {
+    "_id": "47",
+    "name": "Parasect",
+    "types": ["BUG", "GRASS"],
+    "description": "The large mushroom on its back controls it. It often fights over territory with Shiinotic.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 47}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/047.png"
+  },
+  {
+    "_id": "48",
+    "name": "Venonat",
+    "types": ["BUG", "POISON"],
+    "description": "Lives in the shadows of tall trees where it eats bugs. It is attracted by light at night.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 48}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/048.png"
+  },
+  {
+    "_id": "49",
+    "name": "Venomoth",
+    "types": ["BUG", "POISON"],
+    "description": "The dust-like scales covering its wings are color coded to indicate the kinds of poison it has.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 49}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png"
+  },
+  {
+    "_id": "50",
+    "name": "Diglett",
+    "types": ["GROUND"],
+    "description": "Lives about one yard underground where it feeds on plant roots. It sometimes appears above ground.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 50}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png"
+  },
+  {
+    "_id": "51",
+    "name": "Dugtrio",
+    "types": ["GROUND"],
+    "description": "A team of Diglett triplets. It triggers huge earthquakes by burrowing 60 miles underground.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 51}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/051.png"
+  },
+  {
+    "_id": "52",
+    "name": "Meowth",
+    "types": ["NORMAL"],
+    "description": "Adores round objects. It wanders the streets on a nightly basis to look for dropped loose change.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 52}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+  },
+  {
+    "_id": "53",
+    "name": "Persian",
+    "types": ["NORMAL"],
+    "description": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 53}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png"
+  },
+  {
+    "_id": "54",
+    "name": "Psyduck",
+    "types": ["WATER"],
+    "description": "Always tormented by headaches. It uses psychic powers, but it is not known if it intends to do so.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 54}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "_id": "55",
+    "name": "Golduck",
+    "types": ["WATER"],
+    "description": "Often seen swimming elegantly by lakeshores. It is often mistaken for the Japanese monster Kappa.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 55}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/055.png"
+  },
+  {
+    "_id": "56",
+    "name": "Mankey",
+    "types": ["FIGHTING"],
+    "description": "Extremely quick to anger. It could be docile one moment then thrashing away the next instant.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 56}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "_id": "57",
+    "name": "Primeape",
+    "types": ["FIGHTING"],
+    "description": "Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 57}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/057.png"
+  },
+  {
+    "_id": "58",
+    "name": "Growlithe",
+    "types": ["FIRE"],
+    "description": "Very friendly and faithful to people. It will try to repel enemies by barking and biting.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 58}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png"
+  },
+  {
+    "_id": "59",
+    "name": "Arcanine",
+    "types": ["FIRE"],
+    "description": "A Pokémon that has long been admired for its beauty. It runs agilely as if on wings.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 59}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png"
+  },
+  {
+    "_id": "60",
+    "name": "Poliwag",
+    "types": ["WATER"],
+    "description": "Its skin is so thin, its internal organs are visible. It has trouble walking on its newly grown feet.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 60}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "_id": "61",
+    "name": "Poliwhirl",
+    "types": ["WATER"],
+    "description": "The skin on most of its body is moist. However, the skin on its belly spiral feels smooth.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 61}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/061.png"
+  },
+  {
+    "_id": "62",
+    "name": "Poliwrath",
+    "types": ["WATER", "FIGHTING"],
+    "description": "An adept swimmer at both the front crawl and breaststroke. Easily overtakes the best human swimmers.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 62}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/062.png"
+  },
+  {
+    "_id": "63",
+    "name": "Abra",
+    "types": ["PSYCHIC"],
+    "description": "Using its ability to read minds, it will identify impending danger and teleport to safety.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 63}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png"
+  },
+  {
+    "_id": "64",
+    "name": "Kadabra",
+    "types": ["PSYCHIC"],
+    "description": "Many odd things happen if this Pokémon is close by. For example, it makes clocks run backwards.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 64}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png"
+  },
+  {
+    "_id": "65",
+    "name": "Alakazam",
+    "types": ["PSYCHIC"],
+    "description": "Its brain can outperform a supercomputer. Its IQ (intelligence quotient) is said to be around 5,000.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 65}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png"
+  },
+  {
+    "_id": "66",
+    "name": "Machop",
+    "types": ["FIGHTING"],
+    "description": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 66}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+  },
+  {
+    "_id": "67",
+    "name": "Machoke",
+    "types": ["FIGHTING"],
+    "description": "Loves to build its muscles. It trains in all styles of martial arts to become even stronger.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 67}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/067.png"
+  },
+  {
+    "_id": "68",
+    "name": "Machamp",
+    "types": ["FIGHTING"],
+    "description": "Using its heavy muscles, it throws powerful punches that can send the victim clear over the horizon.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 68}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png"
+  },
+  {
+    "_id": "69",
+    "name": "Bellsprout",
+    "types": ["GRASS", "POISON"],
+    "description": "A carnivorous Pokémon that traps and eats bugs. It uses its root feet to soak up needed moisture.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 69}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png"
+  },
+  {
+    "_id": "70",
+    "name": "Weepinbell",
+    "types": ["GRASS", "POISON"],
+    "description": "It spits out Poison Powder to immobilize the enemy and then finishes it with a spray of Acid.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 70}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/070.png"
+  },
+  {
+    "_id": "71",
+    "name": "Victreebel",
+    "types": ["GRASS", "POISON"],
+    "description": "Lures prey with the sweet aroma of honey. Swallowed whole, the prey is dissolved in a day, bones and all.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 71}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png"
+  },
+  {
+    "_id": "72",
+    "name": "Tentacool",
+    "types": ["WATER", "POISON"],
+    "description": "Drifts in shallow seas. Anglers who hook them by accident are often punished by its stinging acid.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 72}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "_id": "73",
+    "name": "Tentacruel",
+    "types": ["WATER", "POISON"],
+    "description": "The tentacles are normally kept short. On hunts, they are extended to ensnare and immobilize prey.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 73}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png"
+  },
+  {
+    "_id": "74",
+    "name": "Geodude",
+    "types": ["ROCK", "GROUND"],
+    "description": "Found in fields and mountains. Mistaking them for boulders, people often step or trip on them.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 74}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "_id": "75",
+    "name": "Graveler",
+    "types": ["ROCK", "GROUND"],
+    "description": "Often seen rolling down mountain trails. Obstacles are just things to roll straight over, not avoid.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 75}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png"
+  },
+  {
+    "_id": "76",
+    "name": "Golem",
+    "types": ["ROCK", "GROUND"],
+    "description": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it's exposed to air.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 76}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png"
+  },
+  {
+    "_id": "77",
+    "name": "Ponyta",
+    "types": ["FIRE"],
+    "description": "Capable of jumping incredibly high. Its hooves and sturdy legs absorb the impact of a hard landing.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 77}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png"
+  },
+  {
+    "_id": "78",
+    "name": "Rapidash",
+    "types": ["FIRE"],
+    "description": "Very competitive, this Pokémon will chase anything that moves fast in the hopes of racing it.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 78}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/078.png"
+  },
+  {
+    "_id": "79",
+    "name": "Slowpoke",
+    "types": ["WATER", "PSYCHIC"],
+    "description": "Incredibly slow and sluggish. It is quite content to loll about without worrying about the time.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 79}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png"
+  },
+  {
+    "_id": "80",
+    "name": "Slowbro",
+    "types": ["WATER", "PSYCHIC"],
+    "description": "Though usually dim witted, it seems to become inspired if the Shellder on its tail bites down.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 80}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png"
+  },
+  {
+    "_id": "81",
+    "name": "Magnemite",
+    "types": ["ELECTRIC", "STEEL"],
+    "description": "Uses antigravity to stay suspended. Appears without warning and uses Thunder Wave and similar moves.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 81}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+  },
+  {
+    "_id": "82",
+    "name": "Magneton",
+    "types": ["ELECTRIC", "STEEL"],
+    "description": "Formed by several Magnemites linked together. They frequently appear when sunspots flare up.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 82}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png"
+  },
+  {
+    "_id": "83",
+    "name": "Farfetch'd",
+    "types": ["NORMAL", "FLYING"],
+    "description": "In order to prevent their extinction, more people have made an effort to breed these Pokémon.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 83}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png"
+  },
+  {
+    "_id": "84",
+    "name": "Doduo",
+    "types": ["NORMAL", "FLYING"],
+    "description": "It lives on a grassy plain where it can see a long way. If it sees an enemy, it runs away at 60 mph.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 84}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png"
+  },
+  {
+    "_id": "85",
+    "name": "Dodrio",
+    "types": ["NORMAL", "FLYING"],
+    "description": "When running, it's like flying at the speed of sound. It races through grassy plains with powerful strides.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 85}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/085.png"
+  },
+  {
+    "_id": "86",
+    "name": "Seel",
+    "types": ["WATER"],
+    "description": "The protruding horn on its head is very hard. It is used for bashing through thick ice.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 86}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png"
+  },
+  {
+    "_id": "87",
+    "name": "Grimer",
+    "types": ["POISON"],
+    "description": "Made of hardened sludge. It smells too putrid to touch. Even weeds won't grow in its path.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 87}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png"
+  },
+  {
+    "_id": "88",
+    "name": "Muk",
+    "types": ["POISON"],
+    "description": "Thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 88}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png"
+  },
+  {
+    "_id": "89",
+    "name": "Shellder",
+    "types": ["WATER"],
+    "description": "It swims backward by opening and closing its two shells. Its large tongue is always kept hanging out.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 89}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png"
+  },
+  {
+    "_id": "90",
+    "name": "Cloyster",
+    "types": ["WATER", "ICE"],
+    "description": "When attacked, it launches its horns in quick volleys. Its innards have never been seen.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 90}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png"
+  },
+  {
+    "_id": "91",
+    "name": "Gastly",
+    "types": ["GHOST", "POISON"],
+    "description": "Almost invisible, this gaseous Pokémon cloaks the target and puts it to sleep without notice.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 91}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/091.png"
+  },
+  {
+    "_id": "92",
+    "name": "Haunter",
+    "types": ["GHOST", "POISON"],
+    "description": "Because of its ability to slip through block walls, it is said to be from another dimension.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 92}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png"
+  },
+  {
+    "_id": "93",
+    "name": "Gengar",
+    "types": ["GHOST", "POISON"],
+    "description": "Under a full moon, this Pokémon likes to mimic the shadows of people and laugh at their fright.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 93}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png"
+  },
+  {
+    "_id": "94",
+    "name": "Onix",
+    "types": ["ROCK", "GROUND"],
+    "description": "As it grows, the stone portions of its body harden to become similar to a diamond, but colored black.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 94}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png"
+  },
+  {
+    "_id": "95",
+    "name": "Drowzee",
+    "types": ["PSYCHIC"],
+    "description": "Puts enemies to sleep, then eats their dreams. Occasionally gets sick from eating bad dreams.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 96}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png"
+  },
+  {
+    "_id": "96",
+    "name": "Hypno",
+    "types": ["PSYCHIC"],
+    "description": "It carries a pendulum-like device. There once was an incident in which it took away a child it hypnotized.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 97}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/097.png"
+  },
+  {
+    "_id": "97",
+    "name": "Krabby",
+    "types": ["WATER"],
+    "description": "The pincers break off easily. If it loses a pincer, it somehow becomes incapable of walking sideways.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 98}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png"
+  },
+  {
+    "_id": "98",
+    "name": "Kingler",
+    "types": ["WATER"],
+    "description": "The large pincer has 10,000-horsepower strength. However, it is so heavy, it's difficult to aim.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 99}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png"
+  },
+  {
+    "_id": "99",
+    "name": "Voltorb",
+    "types": ["ELECTRIC"],
+    "description": "It is said to camouflage itself as a Poké Ball. It will self-destruct with very little stimulus.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 100}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png"
+  },
+  {
+    "_id": "100",
+    "name": "Electrode",
+    "types": ["ELECTRIC"],
+    "description": "Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 101}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png"
+  },
+  {
+    "_id": "101",
+    "name": "Exeggcute",
+    "types": ["GRASS", "PSYCHIC"],
+    "description": "The heads attract each other and spin around. There must be 6 heads for it to maintain balance.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 102}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png"
+  },
+  {
+    "_id": "102",
+    "name": "Exeggutor",
+    "types": ["GRASS", "PSYCHIC"],
+    "description": "Its cries are very noisy. This is because each of the three heads thinks about whatever it likes.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 103}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png"
+  },
+  {
+    "_id": "103",
+    "name": "Cubone",
+    "types": ["GROUND"],
+    "description": "It always wears the skull of its dead mother, so no one has any idea what its hidden face looks like.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 104}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png"
+  },
+  {
+    "_id": "104",
+    "name": "Marowak",
+    "types": ["GROUND"],
+    "description": "Small and weak, this Pokémon is adept with its Bone Club. It has grown more vicious over the ages.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 105}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/105.png"
+  },
+  {
+    "_id": "105",
+    "name": "Hitmonlee",
+    "types": ["FIGHTING"],
+    "description": "When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 106}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png"
+  },
+  {
+    "_id": "106",
+    "name": "Hitmonchan",
+    "types": ["FIGHTING"],
+    "description": "While apparently doing nothing, it fires punches in lightning fast volleys that are impossible to see.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 107}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png"
+  },
+  {
+    "_id": "107",
+    "name": "Lickitung",
+    "types": ["NORMAL"],
+    "description": "Its tongue has well-developed nerves that run to the very tip, so it can be deftly manipulated.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 108}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png"
+  },
+  {
+    "_id": "108",
+    "name": "Koffing",
+    "types": ["POISON"],
+    "description": "Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 109}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/109.png"
+  },
+  {
+    "_id": "109",
+    "name": "Weezing",
+    "types": ["POISON"],
+    "description": "It mixes gases between its two bodies. Its single head has a noxious smell and is extremely toxic.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 110}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/110.png"
+  },
+  {
+    "_id": "110",
+    "name": "Rhyhorn",
+    "types": ["GROUND", "ROCK"],
+    "description": "Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 111}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/111.png"
+  },
+  {
+    "_id": "111",
+    "name": "Rhydon",
+    "types": ["GROUND", "ROCK"],
+    "description": "Protected by an armor-like hide, it is capable of living in molten lava of 3,600 degrees.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 112}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/112.png"
+  },
+  {
+    "_id": "112",
+    "name": "Chansey",
+    "types": ["NORMAL"],
+    "description": "A rare and elusive Pokémon that is said to bring happiness to those who manage to get it.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 113}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png"
+  },
+  {
+    "_id": "113",
+    "name": "Tangela",
+    "types": ["GRASS"],
+    "description": "During battle, it constantly moves the vines that cover its body in order to annoy its opponent.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 114}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png"
+  },
+  {
+    "_id": "114",
+    "name": "Kangaskhan",
+    "types": ["NORMAL"],
+    "description": "The infant rarely ventures out of its mother's protective pouch until it is 3 years old.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 115}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png"
+  },
+  {
+    "_id": "115",
+    "name": "Horsea",
+    "types": ["WATER"],
+    "description": "Known to shoot down flying bugs with precision blasts of ink from the surface of the water.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 116}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/116.png"
+  },
+  {
+    "_id": "116",
+    "name": "Seadra",
+    "types": ["WATER"],
+    "description": "Touching the back fin causes numbness. It hooks its tail to coral to stay in place while sleeping.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 117}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/117.png"
+  },
+  {
+    "_id": "117",
+    "name": "Goldeen",
+    "types": ["WATER"],
+    "description": "During spawning season, they swim gracefully in the water, searching for their perfect mate.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 118}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png"
+  },
+  {
+    "_id": "118",
+    "name": "Seaking",
+    "types": ["WATER"],
+    "description": "Using its horn, it bores holes in riverbed boulders, making nests to prevent its eggs from being washed away.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 119}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/119.png"
+  },
+  {
+    "_id": "119",
+    "name": "Staryu",
+    "types": ["WATER"],
+    "description": "When the stars twinkle at night, it floats up from the sea floor, and its body's center core flickers.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 120}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png"
+  },
+  {
+    "_id": "120",
+    "name": "Starmie",
+    "types": ["WATER", "PSYCHIC"],
+    "description": "Its central core glows with the seven colors of the rainbow. Some people value the core as a gem.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 121}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/121.png"
+  },
+  {
+    "_id": "121",
+    "name": "Mr. Mime",
+    "types": ["PSYCHIC", "FAIRY"],
+    "description": "If interrupted while it is miming, it will slap around the offender with its broad hands.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 122}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png"
+  },
+  {
+    "_id": "122",
+    "name": "Scyther",
+    "types": ["BUG", "FLYING"],
+    "description": "With ninja-like agility and speed, it can create the illusion that there is more than one.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 123}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png"
+  },
+  {
+    "_id": "123",
+    "name": "Jynx",
+    "types": ["ICE", "PSYCHIC"],
+    "description": "It seductively wiggles its hips as it walks. It can cause people to dance in unison with it.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 124}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/124.png"
+  },
+  {
+    "_id": "124",
+    "name": "Electabuzz",
+    "types": ["ELECTRIC"],
+    "description": "Normally found near power plants, they can wander away and cause major blackouts in cities.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 125}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png"
+  },
+  {
+    "_id": "125",
+    "name": "Magmar",
+    "types": ["FIRE"],
+    "description": "Its body temperature is nearly 2,200 degrees Fahrenheit. If it gets wet, it creates a steam explosion.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 126}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png"
+  },
+  {
+    "_id": "126",
+    "name": "Pinsir",
+    "types": ["BUG"],
+    "description": "It grips prey with its pincers until the prey is torn in half. What it can't tear, it tosses far.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 127}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png"
+  },
+  {
+    "_id": "127",
+    "name": "Tauros",
+    "types": ["NORMAL"],
+    "description": "When it targets an enemy, it charges furiously while whipping its body with its long tails.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 128}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/128.png"
+  },
+  {
+    "_id": "128",
+    "name": "Magikarp",
+    "types": ["WATER"],
+    "description": "In the distant past, it was somewhat stronger than the horribly weak descendants that exist today.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 129}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png"
+  },
+  {
+    "_id": "129",
+    "name": "Gyarados",
+    "types": ["WATER", "FLYING"],
+    "description": "It has an extremely aggressive nature. The Hyper Beam it shoots from its mouth totally incinerates all targets.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 130}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png"
+  },
+  {
+    "_id": "130",
+    "name": "Lapras",
+    "types": ["WATER", "ICE"],
+    "description": "A gentle soul that can read the minds of people. It can ferry people across the sea on its back.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 131}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/131.png"
+  },
+  {
+    "_id": "131",
+    "name": "Ditto",
+    "types": ["NORMAL"],
+    "description": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 132}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png"
+  },
+  {
+    "_id": "132",
+    "name": "Eevee",
+    "types": ["NORMAL"],
+    "description": "Possessing an unbalanced and unstable genetic makeup, it conceals many possible evolutions.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 133}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+  },
+  {
+    "_id": "133",
+    "name": "Vaporeon",
+    "types": ["WATER"],
+    "description": "Lives close to water. Its long tail is ridged with a fin, which is often mistaken for a mermaid's.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 134}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png"
+  },
+  {
+    "_id": "134",
+    "name": "Jolteon",
+    "types": ["ELECTRIC"],
+    "description": "If it is angered or startled, the fur all over its body bristles like sharp needles that pierce foes.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 135}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
+  },
+  {
+    "_id": "135",
+    "name": "Flareon",
+    "types": ["FIRE"],
+    "description": "When storing thermal energy in its body, its temperature could soar to over 1600 degrees Fahrenheit.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 136}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/136.png"
+  },
+  {
+    "_id": "136",
+    "name": "Porygon",
+    "types": ["NORMAL"],
+    "description": "An artificial Pokémon created due to extensive research, it can perform only what is programmed into it.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 137}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png"
+  },
+  {
+    "_id": "137",
+    "name": "Omanyte",
+    "types": ["ROCK", "WATER"],
+    "description": "It is thought to have inhabited beaches 300 million years ago. It is protected by a stiff shell.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 138}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/138.png"
+  },
+  {
+    "_id": "138",
+    "name": "Omastar",
+    "types": ["ROCK", "WATER"],
+    "description": "Despite having strong fangs and tentacles, it went extinct when its heavy shell made it unable to catch prey.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 139}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/139.png"
+  },
+  {
+    "_id": "139",
+    "name": "Kabuto",
+    "types": ["ROCK", "WATER"],
+    "description": "A Pokémon that was regenerated from a fossil found in what was once the ocean floor eons ago.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 140}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/140.png"
+  },
+  {
+    "_id": "140",
+    "name": "Kabutops",
+    "types": ["ROCK", "WATER"],
+    "description": "A slim and fast swimmer. It slices its prey with its sharp sickles and drinks the body fluids.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 141}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/141.png"
+  },
+  {
+    "_id": "141",
+    "name": "Aerodactyl",
+    "types": ["ROCK", "FLYING"],
+    "description": "A ferocious, prehistoric Pokémon that goes for the enemy's throat with its serrated saw-like fangs.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 142}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png"
+  },
+  {
+    "_id": "142",
+    "name": "Snorlax",
+    "types": ["NORMAL"],
+    "description": "It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 143}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"
+  },
+  {
+    "_id": "143",
+    "name": "Articuno",
+    "types": ["ICE", "FLYING"],
+    "description": "A legendary bird Pokémon that is said to appear to doomed people who are lost in icy mountains.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 144}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png"
+  },
+  {
+    "_id": "144",
+    "name": "Zapdos",
+    "types": ["ELECTRIC", "FLYING"],
+    "description": "This legendary bird is said to appear when the sky turns dark and lightning showers down.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 145}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png"
+  },
+  {
+    "_id": "145",
+    "name": "Moltres",
+    "types": ["FIRE", "FLYING"],
+    "description": "This legendary bird Pokémon is said to bring early spring to the wintry lands it visits.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 146}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png"
+  },
+  {
+    "_id": "146",
+    "name": "Dratini",
+    "types": ["DRAGON"],
+    "description": "It is born large to start with. It repeatedly sheds its skin as it steadily grows longer.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 147}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png"
+  },
+  {
+    "_id": "147",
+    "name": "Dragonair",
+    "types": ["DRAGON"],
+    "description": "A mystical Pokémon that exudes a gentle aura. Has the ability to change climate conditions.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 148}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png"
+  },
+  {
+    "_id": "149",
+    "name": "Dragonite",
+    "types": ["DRAGON", "FLYING"],
+    "description": "Capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 149}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png"
+  },
+  {
+    "_id": "150",
+    "name": "Mewtwo",
+    "types": ["PSYCHIC"],
+    "description": "A Pokémon created by recombining Mew's genes. It's said to have the most savage heart among Pokémon.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 150}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"
+  },
+  {
+    "_id": "151",
+    "name": "Mew",
+    "types": ["PSYCHIC"],
+    "description": "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
+    "regions": [{"regionName": "National", "regionPokedexNumber": 151}],
+    "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png"
+  }
+]
