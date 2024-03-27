@@ -15,23 +15,31 @@
                 <p v-else>Type : {{ pokemon.types[0] }}</p>  
                 
                 <p>{{ pokemon.description }}</p>
-                <button>Lire la description</button>
+                <button @click="() => readTxt(pokemon.description)">Lire la description</button>
             </div>
         </div>
         
     </div>
   </template>
   
-  <script>
-  export default {
-    props: {
-      pokemon: {
-        type: Object,
-        required: true
-      }
+<script>
+export default {
+  props: {
+    pokemon: {
+      type: Object,
+      required: true
     }
-  };
-  </script>
+  },
+  methods: {
+    readTxt(texte) {
+        let syntheseVocale = window.speechSynthesis;
+        let utterance = new SpeechSynthesisUtterance(texte);
+        syntheseVocale.speak(utterance);
+    }
+  }
+};
+</script>
+
   
   <style lang="sass" scoped>
   .container

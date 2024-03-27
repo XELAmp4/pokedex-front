@@ -1,10 +1,12 @@
 <template>
     <li :class="'pokemonCard ' + type[0].toLowerCase() ">
         <router-link class="linkCard" :to="'/pokemon/' + name">
-            <p>{{ name }}</p>
-            <p>{{ type[0] }}</p>
+            <div>
+                <p>{{ name }}</p>
+                <p>{{ type[0] }}</p>
+                <p>{{ pokedexNumber }}</p>
+            </div>
             <img :src="img" :alt="name">
-            <p>{{ pokedexNumber }}</p>
         </router-link> 
     </li>
   </template>
@@ -27,12 +29,14 @@
 .pokemonCard
     background-color: $col1
     padding: 10px
-    width: fit-content
+    width: 400px
+    height: 150px
     list-style: none
   
 
     img
-        width: 200px
+        width: auto
+        height: 130px
 
     &.bug
         background-color: $bug
@@ -92,6 +96,10 @@
 .linkCard
     text-decoration: none
     color: black
+    display: flex
+    flex-direction: row
+    max-width: 400px
+    max-height: 150px
 
 </style>
   
