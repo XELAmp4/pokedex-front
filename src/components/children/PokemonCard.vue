@@ -1,43 +1,138 @@
 <template>
-    <li :class="'pokemonCard ' + type[0].toLowerCase() ">
-        <router-link class="linkCard" :to="'/pokemon/' + name">
-            <div>
-                <p>{{ name }}</p>
-                <p>{{ type[0] }}</p>
-                <p>{{ pokedexNumber }}</p>
+    <li :class="'pokemonCard ' + types[0].toLowerCase() " :data-type1="types[0].toLowerCase()" :data-type2="types[1] ? types[1].toLowerCase() : ''">
+        <router-link class="pokemonCard-link" :to="'/pokemon/' + name">
+            <div class="pokemonCard-content">
+                <p class="pokemonCard-number">{{ formatingNumber(pokedexNumber) }}</p>
+                <p class="pokemonCard-name">{{ name }}</p>
+                <div class="pokemonCard-typeContainer">
+                    <PokemonType
+                        v-for="(type, index) in types"
+                        :key="index"
+                        :type="type"
+                    />
+                </div>
             </div>
-            <img :src="img" :alt="name">
+            <img :src="img" :alt="name" class="pokemonCard-image">
         </router-link> 
+        <WatermarkPokeball/>
     </li>
-  </template>
+</template>
   
-  <script>
+<script>
+import WatermarkPokeball from './WatermarkPokeball.vue';
+import PokemonType from './PokemonType.vue';
+
   export default {
     name: 'PokemonCard',
     props: {
       name: String,
-      type: Array,
+      types: Array,
       img: String,
       pokedexNumber: Number
-    }
+    },
+    components: {
+        WatermarkPokeball,
+        PokemonType
+    },
+    methods: {
+        formatingNumber(number) {
+            let formatedNumber = "#";
+            if (number < 10) {
+                formatedNumber += "00" + number.toString()
+            }else if (number < 100){
+                formatedNumber += "0" + number.toString()
+            }else{
+                formatedNumber += number.toString()
+            }
+            return formatedNumber
+        }
   }
-  </script>
+  }
+</script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 @import '/src/styles/variables.sass'
+@import '/src/styles/animations.sass'
 .pokemonCard
     background-color: $col1
-    padding: 10px
     width: 400px
     height: 150px
     list-style: none
-  
+    border-radius: 30px
+    font-family: $ff1
+    position: relative
+    overflow: hidden
+    box-shadow: #00000036 inset 0px -15px 10px 2px
+    transition: box-shadow 1.5s
 
-    img
+    &-link
+        text-decoration: none
+        color: $light
+        display: flex
+        flex-direction: row
+        position: relative
+        z-index: 1
+        width: 100%
+        height: 100%
+        justify-content: space-between
+
+
+    &-content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: $spacing-small
+            right: $spacing-medium
+
+    &-image
+        position: absolute
+        top: 0
+        right: 70px
         width: auto
-        height: 130px
+        height: 95%
+        transform-origin: center
+        transition: transform .8s
+        
+    &-name
+        font-weight: bold
+        font-size: 1.5em
+        margin-top: $spacing-xsmall
+        letter-spacing: 1px
+    
+    &-number
+        font-weight: bold
+        font-size: 1em
 
+    &-type
+        &Container
+            display: flex
+            gap: 5px
+            background-color: rgba($light, .5)
+            margin-left: -$spacing-small
+            border-radius: 0 5px 5px 0
+            padding: 5px $spacing-small
+            width: fit-content
+
+    &-watermark
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: auto
+        z-index: 0
+        opacity: .5
+
+
+    // Effet de survol
+    &:hover
+        .pokemonCard
+            &-watermark
+                animation: shake 1.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite
+            &-image
+                transform: scale(.9)
+
+    // Gestion des types, ne pas écrire après cette ligne pour ne pas perdre de lisibilité
     &.bug
         background-color: $bug
 
@@ -92,14 +187,6 @@
     &.water
         background-color: $water
   
-
-.linkCard
-    text-decoration: none
-    color: black
-    display: flex
-    flex-direction: row
-    max-width: 400px
-    max-height: 150px
 
 </style>
   

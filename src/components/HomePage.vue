@@ -4,7 +4,7 @@
 <div class="header-container">
     <h1>Pokedex</h1>
 
-    <input class="searchBar" type="text" id="name" placeholder="Recherche par nom">
+    <input class="searchBar" type="text" id="name" placeholder="Find by name">
     <div>
         <input type="checkbox"/><label for="scales">Type 1</label>
         <input type="checkbox"/><label for="scales">Type 2</label>
@@ -16,9 +16,9 @@
         v-for="item in items"
         :key="item.id"
         :name="item.name"
-        :type="item.types"
+        :types="item.types"
         :img="item.imgUrl"
-        :pokedexNumber="item.regions.regionPokedexNumber"
+        :pokedexNumber="item.regions[0].regionPokedexNumber"
     />
 </ul>
 
@@ -48,21 +48,23 @@ export default {
     fetchData() {
         // Mettre à jour les données dans le tableau items avec les données importées du fichier JSON
         this.items = pokemonData;
+        console.table(this.items[0].regions[0].regionPokedexNumber);
     }
     },
     components: {
         PokemonCard
     }
+    
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+@import '/src/styles/variables.sass'
 .listingPokemon
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    gap: 10px
+    gap: $spacing-xsmall
     justify-content: center
 
 .header-container
@@ -70,7 +72,7 @@ export default {
     margin: auto
     width: fit-content
     text-align: center
-    margin-bottom: 10px
+    margin-bottom: $spacing-xsmall
 
     .searchBar
         width: 30vw
