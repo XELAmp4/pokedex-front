@@ -10,6 +10,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '/src/styles/variables.sass'
+@import '/src/styles/animations.sass'
 
 *
   padding: 0
@@ -17,6 +19,8 @@ export default {
   box-sizing: border-box
 
 body
-  background-color: #f4f4f4
+  background: $gradient1
+  background-size: 1000% 1000%
+  animation: gradient 15s ease infinite
 
 </style>

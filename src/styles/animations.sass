@@ -17,3 +17,45 @@
     100% 
         transform: translateX(0) rotate(0)
   
+
+
+@keyframes gradient
+    0% 
+        background-position: 0% 50%
+    
+    50% 
+        background-position: 100% 50%
+    
+    100% 
+        background-position: 0% 50%
+
+// *********************************** **
+// *******        OVERLAY       ****** **
+// *********************************** **
+
+@keyframes draw 
+    0%
+        stroke: #00f2fe
+        stroke-dasharray: 2670
+        stroke-dashoffset: 2670
+    33.3%
+        stroke: #4facfe
+    66.6%
+        stroke: #00f2fe
+    100%
+        stroke: #4facfe
+        stroke-dasharray: 2670
+        stroke-dashoffset: 0
+
+@keyframes desappear
+    0%
+        stroke: #4facfe
+    100%
+        stroke: transparent
+
+
+@keyframes appear
+    0%
+        opacity: 0
+    100%
+        opacity: 1

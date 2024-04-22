@@ -47,8 +47,7 @@ export default {
     methods: {
     fetchData() {
         // Mettre à jour les données dans le tableau items avec les données importées du fichier JSON
-        this.items = pokemonData;
-        console.table(this.items[0].regions[0].regionPokedexNumber);
+        this.items = pokemonData; 
     }
     },
     components: {

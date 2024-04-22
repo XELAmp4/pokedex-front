@@ -1,6 +1,6 @@
 <template>
     <router-link id="homeBtn" to="/home">HOME</router-link>
-    <div class="container">
+    <div  :class="'container ' + pokemon.types[0].toLowerCase() ">
         <div class="media">
             <img :src="pokemon.imgUrl" :alt="pokemon.name">
         </div>
@@ -41,17 +41,21 @@ export default {
 </script>
 
   
-  <style lang="sass" scoped>
-  .container
+<style lang="sass" scoped>
+@import '/src/styles/variables.sass'
+@import '/src/styles/animations.sass'
+.container
     display: flex
-  
-  .media
+    width: 100vw
+    height: 100vh
+
+.media
     flex: 1 1 50%
-  
-  .content
+
+.content
     flex: 1 1 50%
-  
-  #homeBtn
+
+#homeBtn
     position: absolute
     top: 0
     left: 0
@@ -61,6 +65,67 @@ export default {
     font-weight: bold
     padding: 5px
     font-family: sans-serif
+
+
+
+
+// Gestion des types, ne pas écrire après cette ligne pour ne pas perdre de lisibilité
+.container
+    &.bug
+        background: $bug-gradient
+
+    &.dark
+        background: $dark-gradient
+
+    &.dragon
+        background: $dragon-gradient
+
+    &.electric
+        background: $electric-gradient
+
+    &.fairy
+        background: $fairy-gradient
+
+    &.fighting
+        background: $fighting-gradient
+
+    &.fire
+        background: $fire-gradient
+
+    &.flying
+        background: $flying-gradient
+
+    &.ghost
+        background: $ghost-gradient
+
+    &.normal
+        background: $normal-gradient
+
+    &.grass
+        background: $grass-gradient
+
+    &.ground
+        background: $ground-gradient
+
+    &.ice
+        background: $ice-gradient
+
+    &.poison
+        background: $poison-gradient
+
+    &.psychic
+        background: $psychic-gradient
+
+    &.rock
+        background: $rock-gradient
+
+    &.steel
+        background: $steel-gradient
+
+    &.water
+        background: $water-gradient
+
+
   
-  </style>
+</style>
   
