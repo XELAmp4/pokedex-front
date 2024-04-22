@@ -8,6 +8,7 @@
     <div>
         <input type="checkbox"/><label for="scales">Type 1</label>
         <input type="checkbox"/><label for="scales">Type 2</label>
+        <FilterType/>
     </div>
 </div> 
 
@@ -28,8 +29,8 @@
 
 <script>
 //Import des composants enfants
-
 import PokemonCard from './children/PokemonCard.vue'
+import FilterType from './children/FilterType.vue'
 
 // Importer le fichier JSON
 import pokemonData from '/datas/pokemon.json'; 
@@ -41,8 +42,8 @@ export default {
     };
     },
     created() {
-    // Appeler une méthode pour récupérer les données JSON lorsque le composant est créé
-    this.fetchData();
+        // Appeler une méthode pour récupérer les données JSON lorsque le composant est créé
+        this.fetchData();
     },
     methods: {
     fetchData() {
@@ -51,7 +52,8 @@ export default {
     }
     },
     components: {
-        PokemonCard
+        PokemonCard,
+        FilterType
     }
     
 };

@@ -123,6 +123,9 @@ import PokemonType from './PokemonType.vue';
         z-index: 0
         opacity: .5
 
+    &.isFiltered
+        display: none
+
 
     // Effet de survol
     &:hover
