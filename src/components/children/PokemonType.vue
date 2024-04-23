@@ -13,7 +13,7 @@ export default {
     
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
+@import '/src/styles/main.sass'
 
 .typeChips
     padding: 5px 10px

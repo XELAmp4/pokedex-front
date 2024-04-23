@@ -29,8 +29,7 @@ import OverlayLogo from './OverlayLogo.vue';
 </script>
   
 <style lang="sass">
-@import '/src/styles/variables.sass'
-@import '/src/styles/animations.sass'
+@import '/src/styles/main.sass'
 
 .overlay 
     position: fixed
