@@ -4,7 +4,7 @@
 <div class="header-container">
     <h1>Pokedex</h1>
 
-    <FilterName/>
+    <FilterName target=".pokemonCard-name"/>
     <div>
         <FilterType/>
     </div>

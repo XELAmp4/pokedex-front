@@ -20,7 +20,7 @@ import OverlayLogo from './OverlayLogo.vue';
       // Cacher l'overlay après 3 secondes
       setTimeout(() => {
         this.showOverlay = false;
-      }, 3500);
+      }, 4000);
     },
     components: {
         OverlayLogo
@@ -42,7 +42,6 @@ import OverlayLogo from './OverlayLogo.vue';
     display: flex
     justify-content: center
     align-items: center
-
 
     &-content 
         width: 30vw

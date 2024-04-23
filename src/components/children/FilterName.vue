@@ -12,16 +12,14 @@
             return {
             };
         },
-        created() {
-        },
-        watch: {
-
+        props: {
+            target: String
         },
         methods: {
             filterByName(e) {
                 const pokemonCards = document.querySelectorAll('li.pokemonCard');
                 pokemonCards.forEach(card => {
-                    const nameElement = card.querySelector('.pokemonCard-name');
+                    const nameElement = card.querySelector(this.target);
                     const name = nameElement.textContent.toLowerCase();
                     let searchContent = e.target.value.toLowerCase();
                     if (name.search(searchContent) == -1) {
