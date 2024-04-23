@@ -1,4 +1,5 @@
 <template>
+  <SiteOverlay/>
     <div class="formContainer">
       <h1>Connexion</h1>
       <form @submit.prevent="login">
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import SiteOverlay from './children/SiteOverlay.vue';
 export default {
     data() {
       return {
@@ -35,6 +37,9 @@ export default {
             this.$router.push({ name: 'Home' });
           }
       }
+    },
+    components: {
+      SiteOverlay
     }
 };
 </script>
