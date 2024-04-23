@@ -6,8 +6,6 @@
 
     <input class="searchBar" type="text" id="name" placeholder="Find by name">
     <div>
-        <input type="checkbox"/><label for="scales">Type 1</label>
-        <input type="checkbox"/><label for="scales">Type 2</label>
         <FilterType/>
     </div>
 </div> 
