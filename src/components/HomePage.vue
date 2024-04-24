@@ -5,6 +5,8 @@
     <h1>Pokedex</h1>
 
     <FilterName target=".pokemonCard-name"/>
+    <FilterNumber target=".pokemonCard-number"/>
+    
     <div>
         <FilterType/>
     </div>
@@ -30,6 +32,7 @@
 import PokemonCard from './children/PokemonCard.vue'
 import FilterType from './children/FilterType.vue'
 import FilterName from './children/FilterName.vue'
+import FilterNumber from './children/FilterNumber.vue'
 
 // Importer le fichier JSON
 import pokemonData from '/datas/pokemon.json'; 
@@ -53,7 +56,8 @@ export default {
     components: {
         PokemonCard,
         FilterType,
-        FilterName
+        FilterName,
+        FilterNumber
     }
     
 };
@@ -61,6 +65,9 @@ export default {
 
 <style lang="sass" scoped>
 @import '/src/styles/main.sass'
+
+h1
+    font-family: sans-serif
 .listingPokemon
     display: flex
     flex-direction: row

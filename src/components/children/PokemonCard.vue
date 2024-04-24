@@ -123,7 +123,8 @@ import PokemonType from './PokemonType.vue';
         opacity: .5
 
     &.isFilteredByType,
-    &.isFilteredByName
+    &.isFilteredByName,
+    &.isFilteredByNumber
         display: none
 
 

@@ -1,11 +1,11 @@
 <template>
-    <input class="searchBar" type="text" id="name" placeholder="Find by name" @input="filterByName">
+    <input class="searchBarNumber" type="number" id="name" placeholder="Find by number" min="1" @input="filterByNumber">
 </template>
 
 <script>
 
     export default {
-        name: 'FilterName',
+        name: 'FilterNumber',
         data() {
             return {
             };
@@ -14,16 +14,16 @@
             target: String
         },
         methods: {
-            filterByName(e) {
+            filterByNumber(e) {
                 const pokemonCards = document.querySelectorAll('li.pokemonCard');
                 pokemonCards.forEach(card => {
                     const nameElement = card.querySelector(this.target);
                     const name = nameElement.textContent.toLowerCase();
                     let searchContent = e.target.value.toLowerCase();
                     if (name.search(searchContent) == -1) {
-                        card.classList.add('isFilteredByName');
+                        card.classList.add('isFilteredByNumber');
                     }else{
-                        card.classList.remove('isFilteredByName');
+                        card.classList.remove('isFilteredByNumber');
                     }
                 });
             }
@@ -34,9 +34,9 @@
 
 <style lang="sass" scoped>
 @import '/src/styles/main.sass'
-.searchBar
+.searchBarNumber
     display: inline-block
-    width: 30vw
+    width: 10vw
     height: 40px
     padding: 5px
     border: 2px solid grey
