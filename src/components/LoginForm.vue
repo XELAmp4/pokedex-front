@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import '/src/styles/main.sass'
 .formContainer
     width: 300px
     padding: 20px

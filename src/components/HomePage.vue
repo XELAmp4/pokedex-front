@@ -4,7 +4,9 @@
 <div class="header-container">
     <h1>Pokedex</h1>
 
-    <input class="searchBar" type="text" id="name" placeholder="Find by name">
+    <FilterName target=".pokemonCard-name"/>
+    <FilterNumber target=".pokemonCard-number"/>
+    
     <div>
         <FilterType/>
     </div>
@@ -29,6 +31,8 @@
 //Import des composants enfants
 import PokemonCard from './children/PokemonCard.vue'
 import FilterType from './children/FilterType.vue'
+import FilterName from './children/FilterName.vue'
+import FilterNumber from './children/FilterNumber.vue'
 
 // Importer le fichier JSON
 import pokemonData from '/datas/pokemon.json'; 
@@ -51,14 +55,19 @@ export default {
     },
     components: {
         PokemonCard,
-        FilterType
+        FilterType,
+        FilterName,
+        FilterNumber
     }
     
 };
 </script>
 
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
+@import '/src/styles/main.sass'
+
+h1
+    font-family: sans-serif
 .listingPokemon
     display: flex
     flex-direction: row
@@ -73,11 +82,4 @@ export default {
     text-align: center
     margin-bottom: $spacing-xsmall
 
-    .searchBar
-        width: 30vw
-        height: 40px
-        padding: 5px
-        border: none
-        border-radius: 5px
-        text-align: center
 </style>

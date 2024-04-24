@@ -11,6 +11,6 @@
   
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
+@import '/src/styles/main.sass'
 
 </style>

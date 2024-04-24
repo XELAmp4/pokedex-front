@@ -49,9 +49,9 @@
             filterByType() {
                 const pokemonCards = document.querySelectorAll('li.pokemonCard');
                 if (this.activeFilters.length === 0) {
-                    // Si ActiveFilters est vide, retirer la classe isFiltered de tous les éléments
+                    // Si ActiveFilters est vide, retirer la classe isFilteredByType de tous les éléments
                     pokemonCards.forEach(card => {
-                        card.classList.remove('isFiltered');
+                        card.classList.remove('isFilteredByType');
                     });
                 } else {
                     pokemonCards.forEach(card => {
@@ -62,16 +62,16 @@
                         if (this.activeFilters.length === 1) {
                             // Si ActiveFilters a une seule valeur
                             if (!(hasType1 || hasType2)) {
-                                card.classList.add('isFiltered');
+                                card.classList.add('isFilteredByType');
                             } else {
-                                card.classList.remove('isFiltered');
+                                card.classList.remove('isFilteredByType');
                             }
                         } else if (this.activeFilters.length === 2) {
                             // Si ActiveFilters a deux valeurs
                             if (!(hasType1 && hasType2)) {
-                                card.classList.add('isFiltered');
+                                card.classList.add('isFilteredByType');
                             } else {
-                                card.classList.remove('isFiltered');
+                                card.classList.remove('isFilteredByType');
                             }
                         }
                     });
@@ -109,7 +109,7 @@
 
 
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
+@import '/src/styles/main.sass'
 .btnFilterByType
     padding: 5px 10px
     border-radius: 30px
@@ -123,7 +123,7 @@
 
     &.isActive
         border: 2px yellow solid
-        
+
     &.isUnavailable
         touch-action: none
         cursor: not-allowed

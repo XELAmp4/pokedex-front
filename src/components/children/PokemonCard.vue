@@ -52,8 +52,7 @@ import PokemonType from './PokemonType.vue';
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
-@import '/src/styles/animations.sass'
+@import '/src/styles/main.sass'
 .pokemonCard
     background-color: $col1
     width: 400px
@@ -123,7 +122,9 @@ import PokemonType from './PokemonType.vue';
         z-index: 0
         opacity: .5
 
-    &.isFiltered
+    &.isFilteredByType,
+    &.isFilteredByName,
+    &.isFilteredByNumber
         display: none
 
 

@@ -42,15 +42,19 @@ export default {
 
   
 <style lang="sass" scoped>
-@import '/src/styles/variables.sass'
-@import '/src/styles/animations.sass'
+@import '/src/styles/main.sass'
 .container
     display: flex
-    width: 100vw
-    height: 100vh
+    flex-wrap: wrap
+    width: 100%
+    height: 100%
 
 .media
     flex: 1 1 50%
+
+    img
+        width: 100%
+        height: auto
 
 .content
     flex: 1 1 50%

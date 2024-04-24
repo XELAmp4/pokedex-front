@@ -10,8 +10,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '/src/styles/variables.sass'
-@import '/src/styles/animations.sass'
+@import '/src/styles/main.sass'
 
 *
   padding: 0
@@ -19,8 +18,41 @@ export default {
   box-sizing: border-box
 
 body
-  background: $gradient1
-  background-size: 1000% 1000%
-  animation: gradient 15s ease infinite
+  background: url($bg-url) repeat 0 0
+  background-color: red
+  animation:  bg-scrolling 2.5s linear infinite
+
+::-webkit-scrollbar 
+  width: 7px
+  height: 7px
+
+::-webkit-scrollbar-button 
+  width: 0px
+  height: 0px
+
+::-webkit-scrollbar-thumb 
+  background: #4de1ff
+  border: 0px none #ffffff
+  border-radius: 50px
+
+::-webkit-scrollbar-thumb:hover 
+  background: #51b0c8
+
+::-webkit-scrollbar-thumb:active 
+  background: #477d90
+
+::-webkit-scrollbar-track 
+  background: #ffffff
+  border: 0px none #ffffff
+  border-radius: 48px
+
+::-webkit-scrollbar-track:hover 
+  background: #cfcfcf
+
+::-webkit-scrollbar-track:active 
+  background: #949494
+
+::-webkit-scrollbar-corner 
+  background: transparent
 
 </style>
