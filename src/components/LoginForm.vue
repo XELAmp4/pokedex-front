@@ -40,7 +40,10 @@ export default {
     },
     components: {
       SiteOverlay
-    }
+    },
+    mounted() {
+    document.title = 'Pokedex | Login';
+  }
 };
 </script>
 
