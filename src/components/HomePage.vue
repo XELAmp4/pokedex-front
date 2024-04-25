@@ -47,6 +47,9 @@ export default {
         // Appeler une méthode pour récupérer les données JSON lorsque le composant est créé
         this.fetchData();
     },
+    mounted() {
+        document.title = 'Pokedex';
+    },
     methods: {
     fetchData() {
         // Mettre à jour les données dans le tableau items avec les données importées du fichier JSON

@@ -4,7 +4,7 @@
     "name": "Bulbasaur",
     "types": ["GRASS", "POISON"],
     "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
-    "regions": [{"regionName": "National", "regionPokedexNumber": 1}],
+    "regions": [{"regionName": "National", "regionPokedexNumber": 1},{"regionName": "Kantō", "regionPokedexNumber": 1}],
     "imgUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
   },
   {

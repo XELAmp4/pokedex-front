@@ -19,6 +19,7 @@ export default {
     padding: 5px 10px
     border-radius: 30px
     font-family: $ff1
+    color: $light
     font-size: .7em
     // Gestion des types, ne pas écrire après cette ligne pour ne pas perdre de lisibilité
     &.bug
