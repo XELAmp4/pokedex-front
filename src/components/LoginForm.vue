@@ -5,11 +5,11 @@
       <form>
           <div>
               <label for="username">Nom d'utilisateur:</label>
-              <input type="text" id="username" v-model="username">
+              <input type="text" id="username" v-model="username" @keydown.enter="login">
           </div>
           <div>
               <label for="password">Mot de passe:</label>
-              <input type="password" id="password" v-model="password">
+              <input type="password" id="password" v-model="password" @keydown.enter="login">
           </div>
           <button type="button" @click="login">Connexion</button>
       </form>

@@ -21,6 +21,9 @@ body
   background: url($bg-url) repeat 0 0
   animation:  bg-scrolling 2.5s linear infinite
 
+  &.menu-open
+    overflow: hidden
+
 ::-webkit-scrollbar 
   width: 7px
   height: 7px

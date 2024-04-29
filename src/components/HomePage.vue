@@ -1,6 +1,5 @@
 <template>
- 
- 
+<BurgerMenu/>
 <div class="header-container">
     <h1>Pokedex</h1>
 
@@ -32,6 +31,8 @@ import PokemonCard from './children/PokemonCard.vue'
 import FilterType from './children/FilterType.vue'
 import FilterName from './children/FilterName.vue'
 import FilterNumber from './children/FilterNumber.vue'
+import BurgerMenu from './children/BurgerMenu.vue'
+
 
 export default {
     data() {
@@ -64,7 +65,8 @@ export default {
         PokemonCard,
         FilterType,
         FilterName,
-        FilterNumber
+        FilterNumber,
+        BurgerMenu
     }
 };
 </script>
