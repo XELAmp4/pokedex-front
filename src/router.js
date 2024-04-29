@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'; 
 import LoginForm from './components/LoginForm.vue';
+import RegisterForm from './components/RegisterForm.vue';
 import HomePage from './components/HomePage.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
 import pokemonData from '/datas/pokemon.json';
@@ -17,6 +18,19 @@ const router = createRouter({
       path: '/login',
       name: 'Login',
       component: LoginForm,
+      beforeEnter: (to, from, next) => {
+        const isAuthenticated = localStorage.getItem('ActiveUser');
+        if (isAuthenticated) {
+          next('/home'); // Redirige vers la page d'accueil si l'utilisateur est déjà connecté
+        } else {
+          next(); // Sinon, laissez l'utilisateur accéder à la page de connexion
+        }
+      }
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: RegisterForm,
       beforeEnter: (to, from, next) => {
         const isAuthenticated = localStorage.getItem('ActiveUser');
         if (isAuthenticated) {
