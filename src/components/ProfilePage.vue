@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="profile-cta">
-            <button class="profile-btnEdit">Edit profile</button>
+            <button @click="letsEdit" class="profile-btnEdit">Edit profile</button>
             <button @click="disconnectUser" class="profile-btnLogout">Log out</button>
         </div>
     </section>
@@ -51,9 +51,11 @@ export default {
     },
     methods: {
         disconnectUser() {
-            console.log('dedans');
             SessionManager.clearSessionData('ActiveUser');
             this.$router.push({ name: 'Login' });
+        },
+        letsEdit() {
+            this.$router.push({ name: 'EditProfile' });
         },
         loadUserData() {
             const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));

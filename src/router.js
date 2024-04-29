@@ -3,6 +3,7 @@ import LoginForm from './components/LoginForm.vue';
 import RegisterForm from './components/RegisterForm.vue';
 import HomePage from './components/HomePage.vue';
 import ProfilePage from './components/ProfilePage.vue';
+import EditProfile from './components/EditProfile.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
 import pokemonData from '/datas/pokemon.json';
 
@@ -60,6 +61,12 @@ const router = createRouter({
       component: ProfilePage,
       meta: { requiresAuth: true }
     },
+    {
+      path: '/profile/edit',
+      name: 'EditProfile',
+      component: EditProfile,
+      meta: { requiresAuth: true }
+    }
   ]
 });
 
