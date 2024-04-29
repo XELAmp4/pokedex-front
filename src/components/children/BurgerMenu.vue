@@ -13,7 +13,7 @@
           <ul>
             <li><a href="#">Accueil</a></li>
             <li><a href="#">À propos</a></li>
-            <li><a href="#">Services</a></li>
+            <router-link to="/profile">Profile</router-link>
             <li><a @click="disconnectUser" class="btnDisconnect">Disconnect</a></li>
           </ul>
         </div>

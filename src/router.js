@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import LoginForm from './components/LoginForm.vue';
 import RegisterForm from './components/RegisterForm.vue';
 import HomePage from './components/HomePage.vue';
+import ProfilePage from './components/ProfilePage.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
 import pokemonData from '/datas/pokemon.json';
 
@@ -52,7 +53,13 @@ const router = createRouter({
       props: (route) => ({ // Utilisez une fonction pour définir les props dynamiquement
         pokemon: pokemonData.find(p => p.name.toLowerCase() === route.params.name.toLowerCase())
       })
-    }
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: ProfilePage,
+      meta: { requiresAuth: true }
+    },
   ]
 });
 

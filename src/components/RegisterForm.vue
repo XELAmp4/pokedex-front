@@ -1,4 +1,5 @@
 <template>
+    
     <div class="formContainer">
         <h1>Inscription</h1>
         <form @submit.prevent="register">
