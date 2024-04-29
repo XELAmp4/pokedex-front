@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "_id": "admin",
+        "password": "admin",
+        "isAdmin": true,
+        "username": "admin",
+        "imgURL": "https://www.bybatisol.com/app/themes/bybatisol/img/default-pp.jpg",
+        "pkmnCatch": [],
+        "pkmnSeen": [],
+        "_class": "UserData"
+      },
+      {
+        "_id": "toto",
+        "password": "toto",
+        "isAdmin": false,
+        "username": "toto",
+        "imgURL": "https://www.bybatisol.com/app/themes/bybatisol/img/default-pp.jpg",
+        "pkmnCatch": [],
+        "pkmnSeen": [],
+        "_class": "UserData"
+      }
+]   

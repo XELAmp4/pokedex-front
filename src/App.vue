@@ -19,7 +19,6 @@ export default {
 
 body
   background: url($bg-url) repeat 0 0
-  background-color: red
   animation:  bg-scrolling 2.5s linear infinite
 
 ::-webkit-scrollbar 

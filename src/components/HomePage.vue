@@ -28,33 +28,37 @@
 </template>
 
 <script>
-//Import des composants enfants
 import PokemonCard from './children/PokemonCard.vue'
 import FilterType from './children/FilterType.vue'
 import FilterName from './children/FilterName.vue'
 import FilterNumber from './children/FilterNumber.vue'
 
-// Importer le fichier JSON
-import pokemonData from '/datas/pokemon.json'; 
-
 export default {
     data() {
-    return {
-        items: [] // Initialiser un tableau pour stocker les données JSON
-    };
+        return {
+            items: [] // Initialiser un tableau pour stocker les données JSON
+        };
     },
     created() {
         // Appeler une méthode pour récupérer les données JSON lorsque le composant est créé
-        this.fetchData();
+        this.fetchDataFromLocalStorage();
     },
     mounted() {
         document.title = 'Pokedex';
     },
     methods: {
-    fetchData() {
-        // Mettre à jour les données dans le tableau items avec les données importées du fichier JSON
-        this.items = pokemonData; 
-    }
+        fetchDataFromLocalStorage() {
+            // Récupérer les données depuis le local storage
+            const storedData = localStorage.getItem('pokemons');
+            
+            // Vérifier si des données sont présentes dans le local storage
+            if (storedData) {
+                // Mettre à jour les données dans le tableau items avec les données du local storage
+                this.items = JSON.parse(storedData); 
+            } else {
+                console.error('Aucune donnée de pokemon trouvée dans le local storage.');
+            }
+        }
     },
     components: {
         PokemonCard,
@@ -62,9 +66,9 @@ export default {
         FilterName,
         FilterNumber
     }
-    
 };
 </script>
+
 
 <style lang="sass" scoped>
 @import '/src/styles/main.sass'
