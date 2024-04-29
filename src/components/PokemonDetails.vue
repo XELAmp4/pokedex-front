@@ -9,17 +9,6 @@
         </div>
 
         <div class="content">
-            <!-- <h1 class="content-title">{{ pokemon.name }}</h1>
-        
-            <div>
-                <p v-if="pokemon.types.length === 2">
-                    Types : {{ pokemon.types[0] }} / {{ pokemon.types[1] }}
-                </p>
-                <p v-else>Type : {{ pokemon.types[0] }}</p>  
-                
-                <p>{{ pokemon.description }}</p>
-                <button @click="() => readTxt(pokemon.description)">Lire la description</button>
-            </div> -->
             <table class="content-table">
                 <tr>
                     <td colspan="3" style="text-align: center;" class="content-title">{{ pokemon.name }}</td>

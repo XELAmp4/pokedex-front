@@ -7,9 +7,6 @@
 </template>
 
 <script>
-    // Importer le fichier JSON
-    import typesData from '/datas/types.json'; 
-
     export default {
         name: 'FilterType',
         data() {
@@ -22,7 +19,7 @@
             // Appeler une méthode pour récupérer les données JSON lorsque le composant est créé
             this.fetchData();
         },
-        watch: {
+        watch: {    
             activeFilters: {
                 handler: 'handleFilterChange', // nom de la fonction à exécuter
                 deep: true // surveiller les changements profonds dans le tableau
@@ -30,9 +27,17 @@
         },
         methods: {
             fetchData() {
-                // Mettre à jour les données dans le tableau items avec les données importées du fichier JSON
-                this.types = typesData; 
-            },
+            // Récupérer les données depuis le local storage
+            const storedTypes = localStorage.getItem('types');
+            
+            // Vérifier si des données sont présentes dans le local storage
+            if (storedTypes) {
+                // Mettre à jour les données dans le tableau types avec les données du local storage
+                this.types = JSON.parse(storedTypes); 
+            } else {
+                console.error('Aucune donnée de types trouvée dans le local storage.');
+            }
+        },
             handleFilterChange() {
                 this.filterByType(); 
                 this.updateButton(); 
