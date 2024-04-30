@@ -5,7 +5,16 @@
             <div class="media-inner">
                 <img :src="pokemon.imgUrl" :alt="pokemon.name">
             </div>
-            
+            <div>
+                <div>
+                    <span>Mark as seen</span>
+                    <input v-model="isPokemonSeen" type="checkbox" :disabled="isPokemonCaught" @click="toggleSeen">
+                </div>
+                <div>
+                    <span>Mark as catch</span>
+                    <input v-model="isPokemonCaught" type="checkbox" @click="toggleCatch">
+                </div>
+            </div>
         </div>
 
         <div class="content">
@@ -49,30 +58,94 @@
     </div>
   </template>
   
-<script>
-import PokemonType from './children/PokemonType.vue'
-export default {
-  props: {
-    pokemon: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    readTxt(texte) {
-        let syntheseVocale = window.speechSynthesis;
-        let utterance = new SpeechSynthesisUtterance(texte);
-        syntheseVocale.speak(utterance);
-    }
-  },
-  mounted() {
-    document.title = 'Pokedex | ' + this.pokemon.name;
-  },
-  components: {
-    PokemonType
-  }
-};
-</script>
+  <script>
+  import PokemonType from './children/PokemonType.vue'
+  
+  export default {
+      props: {
+          pokemon: {
+              type: Object,
+              required: true
+          }
+      },
+      data() {
+          return {
+              isPokemonSeen: false,
+              isPokemonCaught: false
+          };
+      },
+      methods: {
+          toggleSeen() {
+              const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+              if (!activeUser || !activeUser.id) {
+                  console.error('No active user found.');
+                  return;
+              }
+  
+              const usersData = JSON.parse(localStorage.getItem('users'));
+              if (!usersData || !Array.isArray(usersData)) {
+                  console.error('No user data found.');
+                  return;
+              }
+  
+              const activeUserData = usersData.find(user => user._id === activeUser.id);
+              if (!activeUserData) {
+                  console.error('Active user data not found.');
+                  return;
+              }
+  
+              const index = activeUserData.pkmnSeen.indexOf(this.pokemon._id);
+              if (index === -1) {
+                  activeUserData.pkmnSeen.push(this.pokemon._id);
+              } else {
+                  activeUserData.pkmnSeen.splice(index, 1);
+              }
+  
+              localStorage.setItem('users', JSON.stringify(usersData));
+              this.isPokemonSeen = !this.isPokemonSeen;
+          },
+          toggleCatch() {
+              const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+              if (!activeUser || !activeUser.id) {
+                  console.error('No active user found.');
+                  return;
+              }
+  
+              const usersData = JSON.parse(localStorage.getItem('users'));
+              if (!usersData || !Array.isArray(usersData)) {
+                  console.error('No user data found.');
+                  return;
+              }
+  
+              const activeUserData = usersData.find(user => user._id === activeUser.id);
+              if (!activeUserData) {
+                  console.error('Active user data not found.');
+                  return;
+              }
+  
+              const index = activeUserData.pkmnCatch.indexOf(this.pokemon._id);
+              if (index === -1) {
+                  activeUserData.pkmnCatch.push(this.pokemon._id);
+                  if (!this.isPokemonSeen) {
+                      activeUserData.pkmnSeen.push(this.pokemon._id);
+                      this.isPokemonSeen = true;
+                  }
+              } else {
+                  activeUserData.pkmnCatch.splice(index, 1);
+              }
+  
+              localStorage.setItem('users', JSON.stringify(usersData));
+              this.isPokemonCaught = !this.isPokemonCaught;
+          }
+      },
+      mounted() {
+          document.title = 'Pokedex | ' + this.pokemon.name;
+      },
+      components: {
+          PokemonType
+      }
+  };
+  </script>
 
   
 <style lang="sass" scoped>
