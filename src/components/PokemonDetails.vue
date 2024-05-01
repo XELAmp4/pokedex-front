@@ -140,6 +140,32 @@
       },
       mounted() {
           document.title = 'Pokedex | ' + this.pokemon.name;
+          // Récupérer l'utilisateur actif du local storage
+        const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+        if (!activeUser || !activeUser.id) {
+            console.error('No active user found.');
+            return;
+        }
+
+        // Récupérer les données des utilisateurs du local storage
+        const usersData = JSON.parse(localStorage.getItem('users'));
+        if (!usersData || !Array.isArray(usersData)) {
+            console.error('No user data found.');
+            return;
+        }
+
+        // Trouver l'objet utilisateur correspondant à l'utilisateur actif
+        const activeUserData = usersData.find(user => user._id === activeUser.id);
+        if (!activeUserData) {
+            console.error('Active user data not found.');
+            return;
+        }
+
+        // Vérifier si le Pokémon est déjà vu
+        this.isPokemonSeen = activeUserData.pkmnSeen.includes(this.pokemon._id);
+
+        // Vérifier si le Pokémon est déjà attrapé
+        this.isPokemonCaught = activeUserData.pkmnCatch.includes(this.pokemon._id);
       },
       components: {
           PokemonType
