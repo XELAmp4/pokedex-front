@@ -7,11 +7,14 @@ const content = `<!DOCTYPE html>
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    var currentPath = window.location.pathname;
-    // Vérifie si vous êtes déjà sur la racine
-    if (currentPath !== '/') {
-      var redirectUrl = window.location.origin + currentPath;
-      window.location.href = redirectUrl;
+    // Vérifie si la page demandée est introuvable (404)
+    if (document.title === '404 Not Found') {
+      var currentPath = window.location.pathname;
+      var redirectUrl = window.location.origin + '/';
+      // Redirige uniquement si la page demandée est introuvable
+      if (currentPath !== '/') {
+        window.location.href = redirectUrl;
+      }
     }
   </script>
 </head>
