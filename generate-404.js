@@ -7,11 +7,8 @@ const content = `<!DOCTYPE html>
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    // Vérifie si la page demandée est introuvable (404)
-    if (window.location.pathname === '/404.html') {
-      var redirectUrl = window.location.origin + '/';
-      window.location.href = redirectUrl;
-    }
+    var redirectUrl = window.location.href.split('/').slice(0, 4).join('/') + '/'; // Mettez à jour cette URL selon votre configuration
+    window.location.href = redirectUrl;
   </script>
 </head>
 <body>
