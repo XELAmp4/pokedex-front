@@ -13,10 +13,10 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '${process.env.BASE_URL}/login'
     },
     {
-      path: '/login',
+      path: '${process.env.BASE_URL}/login',
       name: 'Login',
       component: LoginForm,
       beforeEnter: (to, from, next) => {
@@ -29,39 +29,39 @@ const router = createRouter({
       }
     },
     {
-      path: '/register',
+      path: '${process.env.BASE_URL}/register',
       name: 'Register',
       component: RegisterForm,
       beforeEnter: (to, from, next) => {
         const isAuthenticated = localStorage.getItem('ActiveUser');
         if (isAuthenticated) {
-          next('/home');
+          next('${process.env.BASE_URL}/home');
         } else {
           next();
         }
       }
     },
     {
-      path: '/home',
+      path: '${process.env.BASE_URL}/home',
       name: 'Home',
       component: HomePage,
       meta: { requiresAuth: true }
     },
     { 
-      path: '/pokemon/:name', 
+      path: '${process.env.BASE_URL}/pokemon/:name', 
       component: PokemonDetails,
       props: (route) => ({ 
         pokemon: pokemonData.find(p => p.name.toLowerCase() === route.params.name.toLowerCase())
       })
     },
     {
-      path: '/profile',
+      path: '${process.env.BASE_URL}/profile',
       name: 'Profile',
       component: ProfilePage,
       meta: { requiresAuth: true }
     },
     {
-      path: '/profile/edit',
+      path: '${process.env.BASE_URL}/profile/edit',
       name: 'EditProfile',
       component: EditProfile,
       meta: { requiresAuth: true }
@@ -78,7 +78,7 @@ router.beforeEach((to, from, next) => {
   const isAuthenticated = localStorage.getItem('ActiveUser'); 
   if (to.matched.some(record => record.meta.requiresAuth)) { 
     if (!isAuthenticated) {
-      next('/login');
+      next('${process.env.BASE_URL}/login');
     } else {
       next();
     }
