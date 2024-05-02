@@ -1,7 +1,7 @@
 <template>
 <BurgerMenu/>
 <div class="header-container">
-    <h1>Pokedex test</h1>
+    <h1>Pokedex</h1>
 
     <FilterName target=".pokemonCard-name"/>
     <FilterNumber target=".pokemonCard-number"/>
