@@ -7,12 +7,12 @@ const content = `<!DOCTYPE html>
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    var redirectUrl = '${redirectUrl}';
+    var redirectUrl = window.location.href.split('/').slice(0, 4).join('/') + '/'; // Mettez à jour cette URL selon votre configuration
     window.location.href = redirectUrl;
   </script>
 </head>
 <body>
-  <p>Redirecting to <a href="${redirectUrl}">${redirectUrl}</a></p>
+  <p>Redirecting to <a href="{{ redirectUrl }}">{{ redirectUrl }}</a></p>
 </body>
 </html>`;
 
