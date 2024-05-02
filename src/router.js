@@ -5,12 +5,11 @@ import HomePage from './components/HomePage.vue';
 import ProfilePage from './components/ProfilePage.vue';
 import EditProfile from './components/EditProfile.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
-import pokemonData from '/datas/pokemon.json';
-
+import pokemonData from '/datas/pokemon.json'; // Correction du chemin du fichier JSON
 
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL), // Utilisez process.env.BASE_URL pour la base URL
   routes: [
     {
       path: '/',
@@ -23,9 +22,9 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const isAuthenticated = localStorage.getItem('ActiveUser');
         if (isAuthenticated) {
-          next('/home'); // Redirige vers la page d'accueil si l'utilisateur est déjà connecté
+          next('/home');
         } else {
-          next(); // Sinon, laissez l'utilisateur accéder à la page de connexion
+          next();
         }
       }
     },
@@ -36,9 +35,9 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const isAuthenticated = localStorage.getItem('ActiveUser');
         if (isAuthenticated) {
-          next('/home'); // Redirige vers la page d'accueil si l'utilisateur est déjà connecté
+          next('/home');
         } else {
-          next(); // Sinon, laissez l'utilisateur accéder à la page de connexion
+          next();
         }
       }
     },
@@ -48,10 +47,10 @@ const router = createRouter({
       component: HomePage,
       meta: { requiresAuth: true }
     },
-    { path: '/pokemon/:name', 
+    { 
+      path: '/pokemon/:name', 
       component: PokemonDetails,
-      meta: { requiresAuth: true },
-      props: (route) => ({ // Utilisez une fonction pour définir les props dynamiquement
+      props: (route) => ({ 
         pokemon: pokemonData.find(p => p.name.toLowerCase() === route.params.name.toLowerCase())
       })
     },
@@ -66,54 +65,26 @@ const router = createRouter({
       name: 'EditProfile',
       component: EditProfile,
       meta: { requiresAuth: true }
+    },
+    // Rediriger vers la page d'accueil pour les routes non trouvées
+    { 
+      path: '/:catchAll(.*)', // Utilisez catch-all pour les routes non trouvées
+      redirect: '/home' // Redirigez vers la page d'accueil
     }
   ]
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (to.path.startsWith('/pokemon/')) {
-//     const pokemonName = to.params.name.toLowerCase(); // Convertir en minuscules pour correspondre au JSON
-//     // Vérifiez si le Pokémon existe dans le JSON
-//     const pokemonExists = pokemonData.find(pokemon => pokemon.name.toLowerCase() === pokemonName);
-//     if (pokemonExists) {
-//       // Si le Pokémon existe, passez le nom du Pokémon comme propriété à PokemonDetails
-//       next();
-//     } else {
-//       // Si le Pokémon n'existe pas, redirigez vers la page 404
-//       next('/home');
-//     }
-//   } else {
-//     // Si la route ne contient pas de paramètre de nom de Pokémon, continuez normalement
-//     next();
-//   }
-// });
-
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem('ActiveUser'); // Vérifie si l'utilisateur est connecté
-  if (to.matched.some(record => record.meta.requiresAuth)) { // Vérifie si la route nécessite une authentification
+  const isAuthenticated = localStorage.getItem('ActiveUser'); 
+  if (to.matched.some(record => record.meta.requiresAuth)) { 
     if (!isAuthenticated) {
-      // Si l'utilisateur n'est pas connecté et tente d'accéder à une route protégée, redirigez-le vers la page de connexion
       next('/login');
     } else {
-      // Si l'utilisateur est connecté, laissez-le accéder à la route protégée
       next();
-    }
-  } else if (to.path.startsWith('/pokemon/')) {
-    const pokemonName = to.params.name.toLowerCase(); // Convertir en minuscules pour correspondre au JSON
-    // Vérifiez si le Pokémon existe dans le JSON
-    const pokemonExists = pokemonData.find(pokemon => pokemon.name.toLowerCase() === pokemonName);
-    if (pokemonExists) {
-      // Si le Pokémon existe, passez le nom du Pokémon comme propriété à PokemonDetails
-      next();
-    } else {
-      // Si le Pokémon n'existe pas, redirigez vers la page 404
-      next('/home');
     }
   } else {
-    // Si la route ne nécessite pas d'authentification et n'est pas une route Pokémon, laissez l'utilisateur accéder normalement
     next();
   }
 });
-
 
 export default router;
