@@ -11,6 +11,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" v-model="password" @keydown.enter="login">
             </div>
+            <router-link to="/register" class="registerLink">No account yet? Create one!</router-link>
             <button type="button" @click="login">Login</button>
         </form>
         <p v-if="loginError" style="color: red; background-color: #ff000012; padding: 5px; border: 1px solid #ff00009c; border-radius: 5px;">Incorrect credentials</p>
@@ -72,9 +73,15 @@
   
   <style lang="sass" scoped>
   @import '/src/styles/main.sass'
+
+  h1
+    text-transform: uppercase
+    margin-bottom: 10px
+
   .formContainer
     width: 300px
     padding: 20px
+    font-family: $ff1
     background-color: #f9f9f9
     border-radius: 8px
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
@@ -88,6 +95,7 @@
     display: flex
     flex-direction: column
     align-items: center
+    gap: 5px
   
   .inputContainer
     margin-bottom: 15px
@@ -108,6 +116,10 @@
     width: 100%
     padding: 12px 20px
     margin: 8px 0
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 1em
+    letter-spacing: 1px
     border: none
     border-radius: 5px
     background-color: #007bff
@@ -125,6 +137,9 @@
   
   .error-message.show
       opacity: 1
+
+  .registerLink
+    color: #007bff
+    text-decoration: none
   
   </style>
-  

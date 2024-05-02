@@ -1,23 +1,24 @@
 <template>
     
     <div class="formContainer">
-        <h1>Inscription</h1>
+        <h1>Register</h1>
         <form @submit.prevent="register">
             <div>
-                <label for="username">Nom d'utilisateur:</label>
+                <label for="username">Username:</label>
                 <input type="text" id="username" v-model="username" required>
             </div>
             <div>
-                <label for="password">Mot de passe:</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" v-model="password" required>
             </div>
             <div>
-                <label for="confirmPassword">Confirmer le mot de passe:</label>
+                <label for="confirmPassword">Confirm password:</label>
                 <input type="password" id="confirmPassword" v-model="confirmPassword" required>
             </div>
-            <button type="submit">S'inscrire</button>
+            <router-link to="/login" class="loginLink">Already have an account? Log in!</router-link>
+            <button type="submit">Register</button>
         </form>
-        <p v-if="registrationError" style="color: red;">Erreur lors de l'inscription</p>
+        <p v-if="registrationError" style="color: red; background-color: #ff000012; padding: 5px; border: 1px solid #ff00009c; border-radius: 5px;">Error during the registration</p>
     </div>
 </template>
 
@@ -79,18 +80,75 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '/src/styles/main.sass'
-.formContainer
+  @import '/src/styles/main.sass'
+
+  h1
+    text-transform: uppercase
+    margin-bottom: 10px
+
+  .formContainer
     width: 300px
     padding: 20px
-    background-color: white
+    font-family: $ff1
+    background-color: #f9f9f9
     border-radius: 8px
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
     text-align: center
-    margin: auto 
-
-.formContainer>form,.formContainer>form>div
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  
+  .formContainer>form, .formContainer>form>div
     display: flex
     flex-direction: column
     align-items: center
-</style>
+    gap: 5px
+  
+  .inputContainer
+    margin-bottom: 15px
+    width: 100%
+  
+  input[type="text"], input[type="password"]
+    width: calc(100% - 10px)
+    padding: 10px
+    border: 1px solid #ddd
+    border-radius: 5px
+    background-color: #fff
+    transition: border-color 0.3s ease
+  
+  input[type="text"]:focus, input[type="password"]:focus
+    border-color: #007bff
+  
+  button
+    width: 100%
+    padding: 12px 20px
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 1em
+    letter-spacing: 1px
+    margin: 8px 0
+    border: none
+    border-radius: 5px
+    background-color: #007bff
+    color: white
+    cursor: pointer
+    transition: background-color 0.3s ease
+  
+  button:hover
+    background-color: darken(#007bff, 10% )
+  
+  .error-message
+      color: red
+      margin-top: 10px
+      transition: opacity 0.3s ease
+  
+  .error-message.show
+      opacity: 1
+
+  .loginLink
+    color: #007bff
+    text-decoration: none
+  
+  </style>
+

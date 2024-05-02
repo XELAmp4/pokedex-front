@@ -3,24 +3,25 @@
         <h1>Edit your profile</h1>
         <form @submit.prevent="updateProfile">
             <div>
-                <label for="username">Nom d'utilisateur:</label>
+                <label for="username">Username:</label>
                 <input type="text" id="username" v-model="username">
             </div>
             <div>
-                <label for="password">Nouveau mot de passe:</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" v-model="newPassword">
             </div>
             <div>
-                <label for="confirmPassword">Confirmer le mot de passe:</label>
+                <label for="confirmPassword">Confirm password:</label>
                 <input type="password" id="confirmPassword" v-model="confirmNewPassword">
             </div>
             <div>
-                <label for="imgUrl">URL de l'image:</label>
+                <label for="imgUrl">URL of your profile picture:</label>
                 <input type="text" id="imgUrl" v-model="imgUrl" required>
             </div>
-            <button type="submit">Mettre à jour</button>
+            <button type="submit">Update</button>
+            <button class="comeBack" @click="comeBack">Cancel</button>
         </form>
-        <p v-if="updateError" style="color: red;">Erreur lors de la mise à jour du profil</p>
+        <p v-if="updateError" style="color: red; background-color: #ff000012; padding: 5px; border: 1px solid #ff00009c; border-radius: 5px;">Error during the update</p>
     </div>
 </template>
 
@@ -65,6 +66,9 @@ export default {
 
             // Redirection vers la page d'accueil ou de profil
             this.$router.push({ name: 'Profile' });
+        },
+        comeBack(){
+            this.$router.push({ name: 'Profile' });
         }
     },
     mounted() {
@@ -84,18 +88,76 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '/src/styles/main.sass'
-.formContainer
+  @import '/src/styles/main.sass'
+
+  h1
+    text-transform: uppercase
+    margin-bottom: 10px
+
+  .formContainer
     width: 300px
     padding: 20px
-    background-color: white
+    font-family: $ff1
+    background-color: #f9f9f9
     border-radius: 8px
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
     text-align: center
-    margin: auto 
-
-.formContainer>form,.formContainer>form>div
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  
+  .formContainer>form, .formContainer>form>div
     display: flex
     flex-direction: column
     align-items: center
+    gap: 5px
+  
+  .inputContainer
+    margin-bottom: 15px
+    width: 100%
+  
+  input[type="text"], input[type="password"]
+    width: calc(100% - 10px)
+    padding: 10px
+    border: 1px solid #ddd
+    border-radius: 5px
+    background-color: #fff
+    transition: border-color 0.3s ease
+  
+  input[type="text"]:focus, input[type="password"]:focus
+    border-color: #42b883
+  
+  button
+    width: 100%
+    padding: 12px 20px
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 1em
+    letter-spacing: 1px
+    margin: 8px 0
+    border: none
+    border-radius: 5px
+    background-color: #42b883
+    color: white
+    cursor: pointer
+    transition: background-color 0.3s ease
+  
+    &:hover
+        background-color: darken(#42b883, 10% )
+
+    &.comeBack
+        background-color: #f04e4e
+
+        &:hover
+            background-color: darken(#f04e4e, 10% )
+  
+  .error-message
+      color: red
+      margin-top: 10px
+      transition: opacity 0.3s ease
+  
+  .error-message.show
+      opacity: 1
+  
 </style>

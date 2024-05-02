@@ -11,9 +11,8 @@
         <div v-if="showMenu" class="burger-menu" @click.stop>
           <!-- Contenu du menu -->
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <router-link to="/profile">Profile</router-link>
+            <li><router-link to="/home">Home</router-link></li>
+            <li><router-link to="/profile">Profile</router-link></li>
             <li><a @click="disconnectUser" class="btnDisconnect">Disconnect</a></li>
           </ul>
         </div>
