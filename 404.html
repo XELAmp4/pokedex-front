@@ -4,13 +4,12 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    var redirectUrl = window.location.origin + '/'; // Définissez la redirection par défaut à la racine
-    var path = window.location.pathname;
-    // Si l'URL demandée n'est pas la racine, redirigez vers cette URL
-    if (path !== '/') {
-      redirectUrl = window.location.origin + path;
+    var currentPath = window.location.pathname;
+    // Vérifie si vous êtes déjà sur la racine
+    if (currentPath !== '/') {
+      var redirectUrl = window.location.origin + currentPath;
+      window.location.href = redirectUrl;
     }
-    window.location.href = redirectUrl;
   </script>
 </head>
 <body>
