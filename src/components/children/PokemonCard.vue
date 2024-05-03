@@ -9,6 +9,7 @@
             <div class="pokemonCard-content">
                 <p class="pokemonCard-number">{{ formatingNumber(pokedexNumber) }}</p>
                 <p class="pokemonCard-name">{{ name }}</p>
+                
                 <div class="pokemonCard-typeContainer">
                     <PokemonType
                         v-for="(type, index) in types"
@@ -18,6 +19,8 @@
                 </div>
             </div>
             <img :src="img" :alt="name" class="pokemonCard-image">
+            <span class="pictoState" v-if="isPokemonCaught"><PictoCatch/></span>
+            <span class="pictoState" v-else-if="isPokemonSeen"><PictoSeen/></span>
         </router-link> 
         <WatermarkPokeball/>
     </li>
@@ -26,6 +29,8 @@
 <script>
 import WatermarkPokeball from './WatermarkPokeball.vue';
 import PokemonType from './PokemonType.vue';
+import PictoSeen from './PictoSeen.vue'
+import PictoCatch from './PictoCatch.vue'
 
   export default {
     name: 'PokemonCard',
@@ -38,7 +43,9 @@ import PokemonType from './PokemonType.vue';
     },
     components: {
         WatermarkPokeball,
-        PokemonType
+        PokemonType,
+        PictoSeen,
+        PictoCatch
     },
   data() {
     return {
@@ -106,6 +113,13 @@ import PokemonType from './PokemonType.vue';
     box-shadow: #00000036 inset 0px -15px 10px 2px
     transition: box-shadow 1.5s
 
+    .pictoState
+        position: absolute
+        top: 10px
+        right: 10px
+        svg
+            width: 20px
+
     &-link
         text-decoration: none
         color: $light
@@ -139,6 +153,7 @@ import PokemonType from './PokemonType.vue';
         font-size: 1.5em
         margin-top: $spacing-xsmall
         letter-spacing: 1px
+        display: inline-block
     
     &-number
         font-weight: bold
@@ -165,7 +180,8 @@ import PokemonType from './PokemonType.vue';
 
     &.isFilteredByType,
     &.isFilteredByName,
-    &.isFilteredByNumber
+    &.isFilteredByNumber,
+    &.isFilteredByState
         display: none
 
 

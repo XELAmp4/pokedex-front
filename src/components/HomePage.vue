@@ -5,10 +5,9 @@
 
     <FilterName target=".pokemonCard-name"/>
     <FilterNumber target=".pokemonCard-number"/>
+    <FilterState/>
     
-    <div>
-        <FilterType/>
-    </div>
+    <FilterType/>
 </div> 
 
 <ul class="listingPokemon">
@@ -32,6 +31,7 @@ import PokemonCard from './children/PokemonCard.vue'
 import FilterType from './children/FilterType.vue'
 import FilterName from './children/FilterName.vue'
 import FilterNumber from './children/FilterNumber.vue'
+import FilterState from './children/FilterState.vue'
 import BurgerMenu from './children/BurgerMenu.vue'
 
 
@@ -66,6 +66,7 @@ export default {
         PokemonCard,
         FilterType,
         FilterName,
+        FilterState,
         FilterNumber,
         BurgerMenu
     }
