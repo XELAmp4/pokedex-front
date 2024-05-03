@@ -5,8 +5,7 @@ import HomePage from './components/HomePage.vue';
 import ProfilePage from './components/ProfilePage.vue';
 import EditProfile from './components/EditProfile.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
-import pokemonData from '/datas/pokemon.json'; // Correction du chemin du fichier JSON
-
+import addPokemon from './components/AddPokemon.vue';
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL), // Utilisez process.env.BASE_URL pour la base URL
@@ -47,11 +46,17 @@ const router = createRouter({
       component: HomePage,
       meta: { requiresAuth: true }
     },
+    {
+      path: '/add',
+      name: 'addPokemon',
+      component: addPokemon,
+      meta: { requiresAuth: true, requiresAdmin: true } // Ajout de la meta pour exiger l'authentification et l'administration
+    },
     { 
       path: '/pokemon/:name', 
       component: PokemonDetails,
       props: (route) => ({ 
-        pokemon: pokemonData.find(p => p.name.toLowerCase() === route.params.name.toLowerCase())
+        pokemon: getPokemon(route.params.name)
       })
     },
     {
@@ -76,15 +81,26 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = localStorage.getItem('ActiveUser'); 
+  const isAdmin = isAuthenticated ? JSON.parse(localStorage.getItem('users')).find(user => user._id === JSON.parse(isAuthenticated).id)?.isAdmin : false; // Vérifier si l'utilisateur est administrateur
   if (to.matched.some(record => record.meta.requiresAuth)) { 
     if (!isAuthenticated) {
       next('/login');
     } else {
-      next();
+      if (to.matched.some(record => record.meta.requiresAdmin) && !isAdmin) { // Vérifier si l'administration est nécessaire et si l'utilisateur est administrateur
+        next('/home');
+      } else {
+        next();
+      }
     }
   } else {
     next();
   }
 });
+
+// Fonction pour récupérer les données d'un Pokémon à partir du local storage
+function getPokemon(name) {
+  const pokemons = JSON.parse(localStorage.getItem('pokemons')) || []; // Récupérer les données des Pokémon à partir du local storage
+  return pokemons.find(pokemon => pokemon.name.toLowerCase() === name.toLowerCase());
+}
 
 export default router;
