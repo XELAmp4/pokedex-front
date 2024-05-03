@@ -11,9 +11,9 @@
       <div v-if="showMenu" class="burger-menu" @click.stop>
         <!-- Contenu du menu -->
         <ul>
-          <li><router-link to="/home">Home</router-link></li>
-          <li><router-link to="/profile">Profile</router-link></li>
-          <li v-if="isAdminUser"><router-link to="/add" class="btnNewPokemon">New Pokemon</router-link></li>
+          <li @click="closeMenu"><router-link to="/home">Home</router-link></li>
+          <li @click="closeMenu"><router-link to="/profile">Profile</router-link></li>
+          <li v-if="isAdminUser" @click="closeMenu"><router-link to="/add" class="btnNewPokemon">New Pokemon</router-link></li>
         </ul>
         <button @click="disconnectUser" class="btnDisconnect">Disconnect</button>
       </div>
