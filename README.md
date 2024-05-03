@@ -1,6 +1,6 @@
 # Projet Pokédex: Front End
 
-Auteur: Alexandre Bellet
+Auteur: Alexandre Bellet   
 Groupe: MMI3 - DWDI
 
 ---
