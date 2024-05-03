@@ -11,10 +11,10 @@
         <div v-if="showMenu" class="burger-menu" @click.stop>
           <!-- Contenu du menu -->
           <ul>
-            <li><router-link to="/home">Home</router-link></li>
-            <li><router-link to="/profile">Profile</router-link></li>
-            <li v-if="isAdminUser"><router-link to="/add">New Pokemon</router-link></li>
-            <li><a @click="disconnectUser" class="btnDisconnect">Disconnect</a></li>
+            <li @click="closeMenu"><router-link to="/home">Home</router-link></li>
+            <li @click="closeMenu"><router-link to="/profile">Profile</router-link></li>
+            <li v-if="isAdminUser" @click="closeMenu"><router-link to="/add">New Pokemon</router-link></li>
+            <li><button @click="disconnectUser" class="btnDisconnect">Disconnect</button></li>
           </ul>
         </div>
       </transition>
@@ -46,8 +46,8 @@
         document.body.classList.remove('menu-open');
       },
       disconnectUser(){
-        console.log('dedans');
         SessionManager.clearSessionData('ActiveUser');
+        this.closeMenu();
         this.$router.push({ name: 'Login' });
       },
       checkAdminUser() {
@@ -72,7 +72,7 @@
   .burger-menu-trigger {
     position: fixed;
     top: 20px;
-    right: 20px; /* Positionnement à droite de l'écran */
+    left: 20px; /* Positionnement à droite de l'écran */
     z-index: 999;
     background: none;
     border: none;
@@ -95,7 +95,7 @@
   .burger-menu {
     position: fixed;
     top: 0;
-    right: 0; /* Positionnement à droite de l'écran */
+    left: 0; /* Positionnement à droite de l'écran */
     width: 200px;
     height: 100%;
     background-color: #333;
@@ -126,7 +126,7 @@
   }
   
   .slide-enter, .slide-leave-to /* .slide-leave-active in <2.1.8 */ {
-    transform: translateX(100%); /* Fait glisser le menu depuis la droite */
+    transform: translateX(-100%); /* Fait glisser le menu depuis la droite */
   }
   
   /* Style pour désactiver le scroll lorsque le menu est ouvert */

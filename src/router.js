@@ -6,6 +6,7 @@ import ProfilePage from './components/ProfilePage.vue';
 import EditProfile from './components/EditProfile.vue';
 import PokemonDetails from './components/PokemonDetails.vue';
 import addPokemon from './components/AddPokemon.vue';
+import EditPokemon from './components/EditPokemon.vue';
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL), // Utilisez process.env.BASE_URL pour la base URL
@@ -50,7 +51,14 @@ const router = createRouter({
       path: '/add',
       name: 'addPokemon',
       component: addPokemon,
-      meta: { requiresAuth: true, requiresAdmin: true } // Ajout de la meta pour exiger l'authentification et l'administration
+      meta: { requiresAuth: true, requiresAdmin: true } 
+    },
+    { 
+      path: '/edit/:name', 
+      component: EditPokemon,
+      props: (route) => ({ 
+        pokemon: getPokemon(route.params.name)
+      })
     },
     { 
       path: '/pokemon/:name', 
