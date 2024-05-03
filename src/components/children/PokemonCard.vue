@@ -165,7 +165,8 @@ import PokemonType from './PokemonType.vue';
 
     &.isFilteredByType,
     &.isFilteredByName,
-    &.isFilteredByNumber
+    &.isFilteredByNumber,
+    &.isFilteredByState
         display: none
 
 
