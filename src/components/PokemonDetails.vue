@@ -163,25 +163,44 @@
             }
             },
             deletePokemon() {
-                // Récupérer les Pokémon existants depuis le localStorage
-                const pokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
-                
-                // Trouver l'index du Pokémon à supprimer dans le tableau
-                const index = pokemons.findIndex(pokemon => pokemon._id === this.pokemon._id);
-                
-                if (index !== -1) {
-                    // Supprimer le Pokémon du tableau
-                    pokemons.splice(index, 1);
-                    
-                    // Mettre à jour les données dans le localStorage
-                    localStorage.setItem('pokemons', JSON.stringify(pokemons));
-                    
-                    // Redirection vers une page appropriée (peut-être la liste des Pokémon)
-                    this.$router.push({ name: 'Home' });
-                } else {
-                    console.error('Pokemon not found in localStorage.');
+        // Récupérer les Pokémon existants depuis le localStorage
+        const pokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
+        
+        // Trouver l'index du Pokémon à supprimer dans le tableau
+        const index = pokemons.findIndex(pokemon => pokemon._id === this.pokemon._id);
+        
+        if (index !== -1) {
+            // Supprimer le Pokémon du tableau
+            pokemons.splice(index, 1);
+            
+            // Mettre à jour les données dans le localStorage
+            localStorage.setItem('pokemons', JSON.stringify(pokemons));
+            
+            // Parcourir tous les utilisateurs du localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.forEach(user => {
+                // Retirer l'ID du Pokémon de la liste pkmnCatch s'il est présent
+                const catchIndex = user.pkmnCatch.indexOf(this.pokemon._id);
+                if (catchIndex !== -1) {
+                    user.pkmnCatch.splice(catchIndex, 1);
                 }
-            }
+                
+                // Retirer l'ID du Pokémon de la liste pkmnSeen s'il est présent
+                const seenIndex = user.pkmnSeen.indexOf(this.pokemon._id);
+                if (seenIndex !== -1) {
+                    user.pkmnSeen.splice(seenIndex, 1);
+                }
+            });
+            
+            // Mettre à jour les données des utilisateurs dans le localStorage
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            // Redirection vers une page appropriée (peut-être la liste des Pokémon)
+            this.$router.push({ name: 'Home' });
+        } else {
+            console.error('Pokemon not found in localStorage.');
+        }
+    }
         },
         mounted() {
             document.title = 'Pokedex | ' + this.pokemon.name;
