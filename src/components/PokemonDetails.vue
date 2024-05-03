@@ -1,5 +1,5 @@
     <template>
-        <router-link id="homeBtn" to="/home">HOME</router-link>
+        <BurgerMenu/>
         <div  :class="'container ' + pokemon.types[0].toLowerCase() ">
             <div class="media">
                 <div class="media-inner">
@@ -52,7 +52,10 @@
                     <tr class="content-line lastRow">
                         <td colspan="3" style="width: 100%;">{{ pokemon.description }}</td>
                     </tr>
-                    <button v-if="isAdminUser" class="btnDelete" @click="deletePokemon">X</button>
+                    <div class="tools">
+                        <button v-if="isAdminUser" class="btnTool isDelete" @click="deletePokemon"><PictoBin/></button>
+                        <router-link v-if="isAdminUser" class="btnTool isEdit" :to="'/edit/' + pokemon.name"><PictoPen/></router-link>
+                    </div>
                 </table>
                 <button class="readerBtn" @click="speakText"><PictoAudio/></button>
             </div>
@@ -60,11 +63,15 @@
         </div>
     </template>
     
-    <script>
+<script>
     import PokemonType from './children/PokemonType.vue'
     import PictoSeen from './children/PictoSeen.vue'
     import PictoCatch from './children/PictoCatch.vue'
     import PictoAudio from './children/PictoAudio.vue'
+    import PictoPen from './children/PictoPen.vue'
+    import PictoBin from './children/PictoBin.vue'
+    import BurgerMenu from './children/BurgerMenu.vue'
+
     
     export default {
         props: {
@@ -162,26 +169,48 @@
                 }
             }
             },
+            EditPokemon(){
+                this.$router.push({ name: 'editPokemon' });
+            },
             deletePokemon() {
-                // Récupérer les Pokémon existants depuis le localStorage
-                const pokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
-                
-                // Trouver l'index du Pokémon à supprimer dans le tableau
-                const index = pokemons.findIndex(pokemon => pokemon._id === this.pokemon._id);
-                
-                if (index !== -1) {
-                    // Supprimer le Pokémon du tableau
-                    pokemons.splice(index, 1);
-                    
-                    // Mettre à jour les données dans le localStorage
-                    localStorage.setItem('pokemons', JSON.stringify(pokemons));
-                    
-                    // Redirection vers une page appropriée (peut-être la liste des Pokémon)
-                    this.$router.push({ name: 'Home' });
-                } else {
-                    console.error('Pokemon not found in localStorage.');
+        // Récupérer les Pokémon existants depuis le localStorage
+        const pokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
+        
+        // Trouver l'index du Pokémon à supprimer dans le tableau
+        const index = pokemons.findIndex(pokemon => pokemon._id === this.pokemon._id);
+        
+        if (index !== -1) {
+            // Supprimer le Pokémon du tableau
+            pokemons.splice(index, 1);
+            
+            // Mettre à jour les données dans le localStorage
+            localStorage.setItem('pokemons', JSON.stringify(pokemons));
+            
+            // Parcourir tous les utilisateurs du localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.forEach(user => {
+                // Retirer l'ID du Pokémon de la liste pkmnCatch s'il est présent
+                const catchIndex = user.pkmnCatch.indexOf(this.pokemon._id);
+                if (catchIndex !== -1) {
+                    user.pkmnCatch.splice(catchIndex, 1);
                 }
-            }
+                
+                // Retirer l'ID du Pokémon de la liste pkmnSeen s'il est présent
+                const seenIndex = user.pkmnSeen.indexOf(this.pokemon._id);
+                if (seenIndex !== -1) {
+                    user.pkmnSeen.splice(seenIndex, 1);
+                }
+            });
+            
+            // Mettre à jour les données des utilisateurs dans le localStorage
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            // Redirection vers une page appropriée
+            this.$router.push({ name: 'Home' });
+        } else {
+            console.error('Pokemon not found in localStorage.');
+        }
+    }
         },
         mounted() {
             document.title = 'Pokedex | ' + this.pokemon.name;
@@ -217,7 +246,10 @@
             PokemonType,
             PictoSeen,
             PictoCatch,
-            PictoAudio
+            PictoAudio,
+            PictoPen,
+            PictoBin,
+            BurgerMenu
         },
         created() {
             this.checkAdminUser();
@@ -234,6 +266,10 @@
         width: 100%
         min-height: 100vh
         padding: 3vw
+
+        @media screen and (max-width: 1024px)
+            flex-direction: column
+        
 
     .media
         flex: 1 1 50%
@@ -276,13 +312,36 @@
         &-table
             border-collapse: collapse
             position: relative
+            width: 100%
 
-            .btnDelete
+            .tools
                 position: absolute
                 top: 20px
                 left: 20px
+                display: flex
+                flex-direction: row
+                gap: 5px
+
+            .btnTool
+                display: block
                 width: 30px
                 height: 30px
+                background-color: pink
+                border: none
+                border-radius: 10px
+                padding: 5px
+
+                &.isDelete
+                    background-color: #f04e4e
+
+                    &:hover
+                        background-color: darken(#f04e4e,10%)
+
+                &.isEdit
+                    background-color: #42b883
+                    
+                    &:hover
+                        background-color: darken(#42b883,10%)
 
         &-title
             border-radius: 10px 10px 5px 5px
