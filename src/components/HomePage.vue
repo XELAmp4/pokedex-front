@@ -7,9 +7,7 @@
     <FilterNumber target=".pokemonCard-number"/>
     <FilterState/>
     
-    <div>
-        <FilterType/>
-    </div>
+    <FilterType/>
 </div> 
 
 <ul class="listingPokemon">

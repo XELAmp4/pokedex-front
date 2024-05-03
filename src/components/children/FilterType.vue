@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="filterTyperContainer">
         <button v-for="(type, index) in types" :key="index" :class="'btnFilterByType ' + type.toLowerCase()" :id="type.toLowerCase()" @click="toggleFilter(type.toLowerCase())">
             {{ type }}
         </button>
@@ -115,6 +115,11 @@
 
 <style lang="sass" scoped>
 @import '/src/styles/main.sass'
+.filterTyperContainer
+    display: flex
+    flex-wrap: wrap
+    gap: 5px
+    margin: 5px
 .btnFilterByType
     padding: 5px 10px
     border-radius: 30px

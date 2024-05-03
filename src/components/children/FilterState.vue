@@ -51,5 +51,6 @@
     border: 2px solid grey
     border-radius: 5px
     text-align: center
+    margin: 0 5px
   </style>
   

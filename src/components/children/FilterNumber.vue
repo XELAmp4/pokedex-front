@@ -37,9 +37,11 @@
 .searchBarNumber
     display: inline-block
     width: 10vw
+    min-width: 100px
     height: 40px
     padding: 5px
     border: 2px solid grey
     border-radius: 5px
     text-align: center
+    margin: 0 5px
 </style>
