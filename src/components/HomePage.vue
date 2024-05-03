@@ -19,6 +19,7 @@
         :types="item.types"
         :img="item.imgUrl"
         :pokedexNumber="item.regions[0].regionPokedexNumber"
+        :idBDD="item._id"
     />
 </ul>
 

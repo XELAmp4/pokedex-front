@@ -1,5 +1,10 @@
 <template>
-    <li :class="'pokemonCard ' + types[0].toLowerCase() " :data-type1="types[0].toLowerCase()" :data-type2="types[1] ? types[1].toLowerCase() : ''">
+    <li :class="'pokemonCard ' + types[0].toLowerCase() " 
+        :data-type1="types[0].toLowerCase()" 
+        :data-type2="types[1] ? types[1].toLowerCase() : ''"
+        :data-seen="isPokemonSeen"
+        :data-catch="isPokemonCaught"
+        >
         <router-link class="pokemonCard-link" :to="'/pokemon/' + name">
             <div class="pokemonCard-content">
                 <p class="pokemonCard-number">{{ formatingNumber(pokedexNumber) }}</p>
@@ -28,12 +33,19 @@ import PokemonType from './PokemonType.vue';
       name: String,
       types: Array,
       img: String,
-      pokedexNumber: Number
+      pokedexNumber: Number,
+      idBDD: Number
     },
     components: {
         WatermarkPokeball,
         PokemonType
     },
+  data() {
+    return {
+      isPokemonSeen: false,
+      isPokemonCaught: false
+    };
+  },
     methods: {
         formatingNumber(number) {
             let formatedNumber = "#";
@@ -46,6 +58,35 @@ import PokemonType from './PokemonType.vue';
             }
             return formatedNumber
         }
+  },
+  mounted() {
+    // Récupérer l'utilisateur actif du local storage
+    const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+    if (!activeUser || !activeUser.id) {
+      console.error('No active user found.');
+      return;
+    }
+
+    // Récupérer les données des utilisateurs du local storage
+    const usersData = JSON.parse(localStorage.getItem('users'));
+    if (!usersData || !Array.isArray(usersData)) {
+      console.error('No user data found.');
+      return;
+    }
+
+    // Trouver l'objet utilisateur correspondant à l'utilisateur actif
+    const activeUserData = usersData.find(user => user._id === activeUser.id);
+    if (!activeUserData) {
+      console.error('Active user data not found.');
+      return;
+    }
+
+    // Vérifier si le Pokémon est déjà vu
+    this.isPokemonSeen = activeUserData.pkmnSeen.includes(this.idBDD);
+
+    // Vérifier si le Pokémon est déjà attrapé
+    this.isPokemonCaught = activeUserData.pkmnCatch.includes(this.idBDD);
+
   }
   }
 </script>
