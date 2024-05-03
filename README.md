@@ -73,4 +73,7 @@ Pas besoin de peupler la BDD, la première génération de Pokémon est déjà p
 
 Lorsque vous choisissez de voir les Pokémon vus dans les filtres, vous verrez apparaître aussi les Pokémon attrapés. Ce n'est pas un bug, c'est la logique que j'ai décidé d'adopter, un Pokémon attrapé a forcément été vu ! (comme sur les jeux, du moins ceux auxquels j'ai joué).
 
+![it's a feature](https://y.yarn.co/71cd02be-f96a-47a1-8d8f-84ea5dff4b71_text.gif)
+
+
 Par manque de temps, je n'ai pas eu le temps d'intégrer de filtre pour les régions. Je n'ai pas non plus géré de confirmation à la suppression ou à la modification d'un Pokémon ou d'un utilisateur.
