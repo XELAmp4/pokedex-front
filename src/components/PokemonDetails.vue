@@ -52,6 +52,7 @@
                     <tr class="content-line lastRow">
                         <td colspan="3" style="width: 100%;">{{ pokemon.description }}</td>
                     </tr>
+                    <button v-if="isAdminUser" class="btnDelete" @click="deletePokemon">X</button>
                 </table>
                 <button class="readerBtn" @click="speakText"><PictoAudio/></button>
             </div>
@@ -76,6 +77,7 @@
             return {
                 isPokemonSeen: false,
                 isPokemonCaught: false,
+                isAdminUser: false,
                 txt: "test"
             };
         },
@@ -149,6 +151,36 @@
 
                 // Utilisez l'API SpeechSynthesis pour lire le texte à voix haute
                 window.speechSynthesis.speak(speech);
+            },
+            checkAdminUser() {
+            const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+            if (activeUser) {
+                const users = JSON.parse(localStorage.getItem('users'));
+                const currentUser = users.find(user => user._id === activeUser.id);
+                if (currentUser && currentUser.isAdmin) {
+                this.isAdminUser = true;
+                }
+            }
+            },
+            deletePokemon() {
+                // Récupérer les Pokémon existants depuis le localStorage
+                const pokemons = JSON.parse(localStorage.getItem('pokemons')) || [];
+                
+                // Trouver l'index du Pokémon à supprimer dans le tableau
+                const index = pokemons.findIndex(pokemon => pokemon._id === this.pokemon._id);
+                
+                if (index !== -1) {
+                    // Supprimer le Pokémon du tableau
+                    pokemons.splice(index, 1);
+                    
+                    // Mettre à jour les données dans le localStorage
+                    localStorage.setItem('pokemons', JSON.stringify(pokemons));
+                    
+                    // Redirection vers une page appropriée (peut-être la liste des Pokémon)
+                    this.$router.push({ name: 'Home' });
+                } else {
+                    console.error('Pokemon not found in localStorage.');
+                }
             }
         },
         mounted() {
@@ -186,6 +218,9 @@
             PictoSeen,
             PictoCatch,
             PictoAudio
+        },
+        created() {
+            this.checkAdminUser();
         }
     };
     </script>
@@ -240,6 +275,14 @@
 
         &-table
             border-collapse: collapse
+            position: relative
+
+            .btnDelete
+                position: absolute
+                top: 20px
+                left: 20px
+                width: 30px
+                height: 30px
 
         &-title
             border-radius: 10px 10px 5px 5px
