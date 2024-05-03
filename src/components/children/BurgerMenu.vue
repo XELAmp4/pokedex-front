@@ -13,6 +13,7 @@
           <ul>
             <li><router-link to="/home">Home</router-link></li>
             <li><router-link to="/profile">Profile</router-link></li>
+            <li v-if="isAdminUser"><router-link to="/add">New Pokemon</router-link></li>
             <li><a @click="disconnectUser" class="btnDisconnect">Disconnect</a></li>
           </ul>
         </div>
@@ -25,7 +26,8 @@
   export default {
     data() {
       return {
-        showMenu: false
+        showMenu: false,
+        isAdminUser: false
       };
     },
     methods: {
@@ -47,8 +49,21 @@
         console.log('dedans');
         SessionManager.clearSessionData('ActiveUser');
         this.$router.push({ name: 'Login' });
+      },
+      checkAdminUser() {
+      const activeUser = JSON.parse(localStorage.getItem('ActiveUser'));
+      if (activeUser) {
+        const users = JSON.parse(localStorage.getItem('users'));
+        const currentUser = users.find(user => user._id === activeUser.id);
+        if (currentUser && currentUser.isAdmin) {
+          this.isAdminUser = true;
+        }
       }
     }
+  },
+  created() {
+    this.checkAdminUser();
+  }
   };
   </script>
   
